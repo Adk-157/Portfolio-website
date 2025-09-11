@@ -889,14 +889,13 @@ body:hover #spotlight {
   height: 128px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 1.5rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #374151; /* gray border */
-  background: #23272a; /* optional: subtle bg behind image */
+  margin: 0 auto 1.5rem;
+  border: 2px solid #374151;
+  background: #23272a;
 }
-
 .profile-photo {
   width: 100%;
   height: 100%;
@@ -904,7 +903,6 @@ body:hover #spotlight {
   object-position: center center;
   display: block;
 }
-
 
 .profile-placeholder {
   font-size: 2.5rem;
