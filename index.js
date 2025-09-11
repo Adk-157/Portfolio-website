@@ -30,44 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Typing animation
-    const typingElement = document.getElementById('typing-subtitle');
-    const words = ["ECE Undergraduate", "VLSI Enthusiast", "IoT Developer", "Quantum Computing Student"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    
-    function typeWriter() {
-        const currentWord = words[wordIndex];
-        let displayText = '';
-        
-        if (isDeleting) {
-            displayText = currentWord.substring(0, charIndex--);
-        } else {
-            displayText = currentWord.substring(0, charIndex++);
-        }
-        
-        typingElement.textContent = displayText;
-        
-        if (!isDeleting && charIndex === currentWord.length + 1) {
-            // Finished typing current word, wait then start deleting
-            isDeleting = true;
-            setTimeout(typeWriter, 2000);
-        } else if (isDeleting && charIndex === -1) {
-            // Finished deleting, move to next word
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            setTimeout(typeWriter, 500);
-        } else {
-            // Continue typing or deleting
-            const typingSpeed = isDeleting ? 50 : 120;
-            setTimeout(typeWriter, typingSpeed);
-        }
-    }
-    
-    // Start typing animation
-    typeWriter();
-    
     // Fade-in animation observer
     const fadeInObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
