@@ -30,9 +30,10 @@ Welcome to my personal portfolio! This web application showcases my projects, sk
 ## 📦 Installation
 
 1. **Clone the repository:**
-git clone https://github.com/Adk-157/Portfolio-website.git
 
-text
+ ```bash
+   git clone https://github.com/Adk-157/Portfolio-website.git
+   ```
 2. **Add your profile photo:**
 - Place your image (e.g., `profile.jpg`) in the `/images/` folder and set the path in `index.html`.
 3. **Open the site:**
@@ -53,12 +54,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## 🙏 Acknowledgments
-
-- Inspired by modern, developer-focused portfolio designs.
-- Icons by [Font Awesome](https://fontawesome.com).
-- Fonts by [Google Fonts](https://fonts.google.com/specimen/Inter).
-
----
 
 Made with ❤️ by Adithya Ram S.
