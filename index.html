@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithya Ram S | ECE Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+        /* The spotlight cursor effect */
+        #spotlight {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.08), transparent 30%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        body:hover #spotlight {
+            opacity: 1;
+        }
+        /* Hide sections by default */
+        .section {
+            display: none;
+        }
+        /* Animation for active section */
+        .section.active {
+            display: block;
+            animation: fadeIn 0.6s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom scrollbar for a cleaner look */
+        main::-webkit-scrollbar {
+            width: 8px;
+        }
+        main::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        main::-webkit-scrollbar-thumb {
+            background-color: #27272a; /* zinc-800 */
+            border-radius: 20px;
+            border: 3px solid #000000;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-400">
+
+    <div id="spotlight"></div>
+
+    <div class="flex flex-col md:flex-row min-h-screen relative z-10">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-1/4 bg-transparent p-8 flex flex-col justify-between md:sticky top-0 md:h-screen">
+            <div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold text-white tracking-tight">Adithya Ram S</h1>
+                    <p class="text-lg text-gray-300 mt-2">Electronics & Communication Engineering</p>
+                    <p class="text-sm text-gray-500 mt-2">IIIT Sri City</p>
+                </div>
+    
+                <nav class="mt-16 hidden md:block">
+                    <ul class="space-y-4">
+                        <li><a href="#about" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">About</span>
+                        </a></li>
+                        <li><a href="#experience" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">Experience</span>
+                        </a></li>
+                        <li><a href="#projects" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">Projects</span>
+                        </a></li>
+                         <li><a href="#achievements" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">Achievements</span>
+                        </a></li>
+                        <li><a href="#skills" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">Skills</span>
+                        </a></li>
+                        <li><a href="#contact" class="nav-link group flex items-center py-2">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-gray-700 group-hover:w-16 group-hover:bg-white transition-all duration-300"></span>
+                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors duration-300">Contact</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                 <a href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf" class="group block w-full text-center px-4 py-2 border border-gray-500 text-gray-400 rounded-md hover:bg-white hover:text-black transition-all duration-300 mb-6">
+                    Download Resume <i class="fas fa-download ml-2 opacity-70 group-hover:opacity-100"></i>
+                </a>
+                <div class="flex items-center justify-center space-x-6">
+                    <a href="mailto:adithya395672@gmail.com" class="text-gray-500 hover:text-white transform hover:scale-110 transition-all duration-300 text-xl"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Adk-157" target="_blank" class="text-gray-500 hover:text-white transform hover:scale-110 transition-all duration-300 text-xl"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" class="text-gray-500 hover:text-white transform hover:scale-110 transition-all duration-300 text-xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-full md:w-3/4 p-8 md:p-16 overflow-y-auto md:h-screen">
+            
+            <!-- About Section -->
+            <section id="about" class="section">
+                <h2 class="text-xl font-bold text-white mb-6 uppercase tracking-widest">About Me</h2>
+                <div class="space-y-4 text-gray-400 leading-relaxed max-w-2xl">
+                    <p>
+                        I am a dedicated and passionate Electronics and Communication Engineering undergraduate at the Indian Institute of Information Technology, Sri City, with a strong academic record (CGPA: 8.29).
+                    </p>
+                    <p>
+                        My core interests lie at the intersection of hardware and software, specifically in VLSI Design, Quantum Computing, IoT Systems, and Embedded Programming. I am driven by a curiosity to build innovative solutions for real-world challenges, particularly in the realm of smart mobility and hardware validation.
+                    </p>
+                    <p>
+                        Through internships and personal projects, I have gained hands-on experience in developing test automation dashboards, IoT-enabled systems with GPS tracking, and low-power communication protocols like LoRa. I am always eager to learn and apply new technologies to create efficient and impactful systems.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2 class="text-xl font-bold text-white mb-12 uppercase tracking-widest">Experience</h2>
+                <div class="space-y-10">
+                    <div class="group relative flex gap-x-6">
+                         <div class="absolute left-0 top-0 h-full w-px bg-gray-800 hidden md:block"></div>
+                         <div class="hidden md:block absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-gray-700 group-hover:bg-white transition-colors duration-300"></div>
+                         <p class="flex-shrink-0 text-sm font-semibold text-gray-500 w-32 pt-1">May – Jul 2025</p>
+                         <div>
+                             <h3 class="text-lg font-semibold text-gray-200 group-hover:text-white transition-colors duration-300">Software Intern, Hardware Platform Solutions</h3>
+                             <p class="text-md text-gray-500">Celestica India Pvt. Ltd., Chennai</p>
+                             <ul class="mt-3 list-disc list-inside text-gray-400 space-y-2 text-sm">
+                                 <li>Built a comprehensive test automation dashboard for hardware validation.</li>
+                                 <li>Developed an API-based rerun system with SSH integration for automated testing workflows.</li>
+                                 <li>Improved database interaction and resolved qTest UI synchronization issues.</li>
+                             </ul>
+                         </div>
+                     </div>
+                     <div class="group relative flex gap-x-6">
+                         <div class="absolute left-0 top-0 h-full w-px bg-gray-800 hidden md:block"></div>
+                         <div class="hidden md:block absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-gray-700 group-hover:bg-white transition-colors duration-300"></div>
+                         <p class="flex-shrink-0 text-sm font-semibold text-gray-500 w-32 pt-1">Jul – Aug 2025</p>
+                         <div>
+                             <h3 class="text-lg font-semibold text-gray-200 group-hover:text-white transition-colors duration-300">Research Intern - Honours Project</h3>
+                             <p class="text-md text-gray-500">IIIT Sri City</p>
+                             <ul class="mt-3 list-disc list-inside text-gray-400 space-y-2 text-sm">
+                                 <li>Developed an IoT-enabled e-cycle system with GPS tracking and IMU sensor integration.</li>
+                                 <li>Implemented a real-time data visualization dashboard using Firebase and Leaflet.js.</li>
+                                 <li>Integrated multi-sensor data fusion for enhanced vehicle monitoring.</li>
+                             </ul>
+                         </div>
+                     </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                 <h2 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Personal Projects</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-zinc-900/50 rounded-lg p-6 border border-zinc-800 hover:border-white/50 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-200">Design of CMOS Pulse Shaping Circuits</h3>
+                        <p class="text-sm text-gray-500 mt-2">VLSI research on superconducting qubit controllers and DRAG pulse shaping to reduce spectral leakage.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">VLSI</span>
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">Quantum Computing</span>
+                        </div>
+                    </div>
+                     <div class="bg-zinc-900/50 rounded-lg p-6 border border-zinc-800 hover:border-white/50 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-200">SAFE-RHD 2.0: Hazard Detection</h3>
+                        <p class="text-sm text-gray-500 mt-2">Reproducing and enhancing an edge-based road safety system with multi-sensor fusion for anomaly detection.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">Machine Learning</span>
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">Edge AI</span>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900/50 rounded-lg p-6 border border-zinc-800 hover:border-white/50 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-200">Smart Street Light with LoRa</h3>
+                        <p class="text-sm text-gray-500 mt-2">AC dimmer controlled street lighting system with remote monitoring via LoRa communication.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">IoT</span>
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">LoRa</span>
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">Embedded C</span>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900/50 rounded-lg p-6 border border-zinc-800 hover:border-white/50 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-200">Wi-Fi Jammer & Repeater</h3>
+                        <p class="text-sm text-gray-500 mt-2">Dual-purpose wireless network management system using an ESP8266 microcontroller.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">ESP8266</span>
+                           <span class="bg-gray-800 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded">Networking</span>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            
+            <!-- Achievements Section -->
+            <section id="achievements" class="section">
+                 <h2 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Achievements</h2>
+                 <div class="space-y-12">
+                     <div>
+                         <h3 class="text-lg font-semibold text-white mb-6">Positions of Responsibility</h3>
+                         <div class="space-y-6">
+                            <div class="pl-4 border-l-2 border-gray-800">
+                                 <p class="text-sm text-gray-500">Aug 2025 - Present</p>
+                                 <h4 class="font-bold text-gray-200 mt-1">Club Lead, NexSync Smart Mobility Club</h4>
+                                 <p class="text-gray-400 text-sm mt-1">Led smart mobility research initiatives and vehicle-to-vehicle communication projects.</p>
+                            </div>
+                            <div class="pl-4 border-l-2 border-gray-800">
+                                 <p class="text-sm text-gray-500">Sep 2024 - Sep 2025</p>
+                                 <h4 class="font-bold text-gray-200 mt-1">Co-Lead, Marketing Team</h4>
+                                 <p class="text-gray-400 text-sm mt-1">Managed marketing for institute-level events and supervised promotional strategies.</p>
+                            </div>
+                         </div>
+                     </div>
+                     <div>
+                         <h3 class="text-lg font-semibold text-white mb-6">Certifications</h3>
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
+                                <p class="text-sm font-semibold text-gray-200">Verilog HDL: VLSI Masterclass</p>
+                                <p class="text-xs text-gray-500">Udemy - Apr 2025</p>
+                            </div>
+                             <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
+                                <p class="text-sm font-semibold text-gray-200">IoT and Autonomous Systems</p>
+                                <p class="text-xs text-gray-500">IIIT Sri City IEEE ITSS - May 2025</p>
+                            </div>
+                            <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
+                                <p class="text-sm font-semibold text-gray-200">Internship on IoT with ESP32</p>
+                                <p class="text-xs text-gray-500">COGTIS Technologies - Mar 2024</p>
+                            </div>
+                            <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
+                                <p class="text-sm font-semibold text-gray-200">Marketing Team Co-Lead</p>
+                                <p class="text-xs text-gray-500">IIIT Sri City - AY 2024-25</p>
+                            </div>
+                          </div>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                 <h2 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Technical Skills</h2>
+                 <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Programming & Languages</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">Python</span><span class="skill-tag">Embedded C</span><span class="skill-tag">Verilog HDL</span><span class="skill-tag">MATLAB</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Microcontrollers & Platforms</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">ESP32</span><span class="skill-tag">ESP8266</span><span class="skill-tag">8051</span><span class="skill-tag">PIC16F877A</span><span class="skill-tag">Arduino</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Tools & Protocols</h3>
+                        <div class="flex flex-wrap gap-3">
+                           <span class="skill-tag">Arduino IDE</span><span class="skill-tag">Firebase</span><span class="skill-tag">Leaflet.js</span><span class="skill-tag">Git & GitHub</span><span class="skill-tag">LoRa</span><span class="skill-tag">Wi-Fi</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Hardware & Core Concepts</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Circuit Design</span><span class="skill-tag">PCB Design</span><span class="skill-tag">VLSI</span><span class="skill-tag">Embedded Systems</span><span class="skill-tag">Control Systems</span>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                 <h2 class="text-xl font-bold text-white mb-8 uppercase tracking-widest">Get In Touch</h2>
+                 <div class="max-w-2xl">
+                    <p class="text-gray-400 leading-relaxed">
+                        I'm currently seeking opportunities for internships and full-time roles where I can apply my skills in electronics and embedded systems. My inbox is always open, whether you have a question or just want to say hi. I'll do my best to get back to you!
+                    </p>
+                    <a href="mailto:adithya395672@gmail.com" class="group inline-block mt-8 px-6 py-3 border border-gray-500 text-gray-300 rounded-md hover:bg-white hover:text-black transition-all duration-300">
+                        Say Hello <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                 </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const spotlight = document.getElementById('spotlight');
+            document.addEventListener('mousemove', (e) => {
+                spotlight.style.setProperty('--x', e.clientX + 'px');
+                spotlight.style.setProperty('--y', e.clientY + 'px');
+            });
+
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function updateNav(activeId) {
+                 navLinks.forEach(link => {
+                    const indicator = link.querySelector('.nav-indicator');
+                    const text = link.querySelector('.nav-text');
+                    if (link.getAttribute('href') === activeId) {
+                        indicator.classList.add('w-16', 'bg-white');
+                        indicator.classList.remove('w-8', 'bg-gray-700');
+                        text.classList.add('text-white');
+                        text.classList.remove('text-gray-500');
+                    } else {
+                        indicator.classList.remove('w-16', 'bg-white');
+                        indicator.classList.add('w-8', 'bg-gray-700');
+                        text.classList.remove('text-white');
+                        text.classList.add('text-gray-500');
+                    }
+                });
+            }
+
+            function showSection(id, shouldPushState = true) {
+                let sectionFound = false;
+                sections.forEach(section => {
+                    if ('#' + section.id === id) {
+                        section.classList.add('active');
+                        sectionFound = true;
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+
+                if (!sectionFound) {
+                    document.querySelector('#about').classList.add('active');
+                    id = '#about';
+                }
+                
+                updateNav(id);
+
+                if (shouldPushState) {
+                    history.pushState(null, null, id);
+                }
+            }
+
+            const initialHash = window.location.hash || '#about';
+            showSection(initialHash, false);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    showSection(targetId);
+                });
+            });
+
+            window.addEventListener('popstate', function() {
+                const hash = window.location.hash || '#about';
+                showSection(hash, false);
+            });
+            
+            const skillTagStyle = "bg-zinc-800 text-gray-300 text-sm font-medium px-4 py-2 rounded";
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.className = skillTagStyle;
+            });
+        });
+    </script>
+</body>
+</html>
+
