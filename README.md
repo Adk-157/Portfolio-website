@@ -53,6 +53,3 @@ Welcome to my personal portfolio! This web application showcases my projects, sk
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-
-Made with ❤️ by Adithya Ram S.
