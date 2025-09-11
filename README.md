@@ -1,59 +1,68 @@
-Adithya Ram S - Personal Portfolio Website
-This repository contains the source code for my personal portfolio website. It is a modern, single-page application designed to showcase my skills, projects, and professional experience as an Electronics and Communication Engineering student. The website is built with a clean, minimalist aesthetic and features several dynamic, interactive elements.
+# Adithya Ram S – Personal Portfolio Website
 
-View Live Demo
-Screenshot
-A preview of the portfolio's main interface.
+Welcome to the source code for my personal portfolio website, built using pure HTML, CSS, and JavaScript.
 
-Features
-Single-Page Layout: All content is accessible through a smooth, continuous scrolling experience.
+## 🚀 Live Demo
 
-Responsive Design: The layout is fully responsive and optimized for viewing on desktops, tablets, and mobile devices.
+Check out the live site here:  
+https://adk-157.github.io/Portfolio-website/
 
-Interactive UI/UX:
+## ✨ Features
 
-Custom Cursor: A custom-designed cursor provides visual feedback when hovering over interactive elements.
+- **Minimal dark aesthetic** (pure black background, grayscale text)
+- Custom cursor & spotlight effect  
+- Typing animation for subtitle
+- Smooth section transitions and fade-in animations  
+- Responsive design for mobile/tablet/desktop
+- Timeline sections for education & experience
+- Project cards and categorized skill tags
+- Resume download & social/contact links
 
-Spotlight Effect: A subtle radial gradient follows the cursor to highlight content.
+## 🖼️ Profile Photo
 
-Dynamic Typing Animation: The subtitle under my name cycles through key skills and roles.
+To use your own photo:
+1. Place your photo file in the `images/` folder (e.g., `images/profile.jpg`).
+2. In `index.html`, update the `<img src="images/profile.jpg" ... >` tag in the profile section.
 
-Scroll-Based Animations: Content gracefully fades into view as you scroll down the page, creating an engaging user experience.
+## 📁 Folder Structure
 
-Sticky Navigation: The sidebar remains fixed, providing easy navigation and highlighting the active section as you scroll.
+Portfolio-website/
+├─ images/
+│ └─ profile.jpg
+├─ index.html
+├─ index.css
+├─ index.js
+├─ Resume.pdf
+└─ README.md
 
-Technologies Used
-HTML5: For the core structure and content of the website.
+text
 
-Tailwind CSS: A utility-first CSS framework for rapid and responsive UI development.
+## ⚡ Usage & Customization
 
-JavaScript (ES6): To power all the dynamic features, including the animations, custom cursor, and scroll-based interactions.
+1. **Clone this repository:**
+git clone https://github.com/Adk-157/Portfolio-website.git
 
-Font Awesome: For high-quality icons used throughout the site.
+text
+2. **Modify content**  
+- Update info, projects, or skills in `index.html`.
+- Add/change your profile photo in `images/`.
+- Replace `Resume.pdf` to update your résumé.
+3. **Style**  
+- Edit `index.css` for color, typography, layout tweaks.
+4. **Animations/JS**  
+- For interactive and dynamic features, edit `index.js`.
 
-How to Use
-To view or edit this project locally:
+## ☁️ Deploy on GitHub Pages
 
-Clone the repository:
+1. Commit and push all your changes to the `main` branch.
+2. In GitHub repo settings, enable GitHub Pages with root `/` as the source.
+3. Visit your GitHub Pages link (shown above).
 
-git clone [https://github.com/Adk-157/Adk-157.github.io.git](https://github.com/Adk-157/Adk-157.github.io.git)
+## 📜 License
 
-Navigate to the project directory:
+MIT License – Feel free to use and adapt for your own portfolio.
 
-cd Adk-157.github.io
+---
 
-Open index.html in your browser:
-Simply open the index.html file in a web browser like Chrome or Firefox to see the website.
-
-File Structure
-The project maintains a simple and organized file structure:
-
-.
-├── images/
-│   └── DSC_9230.JPG    # Profile picture
-├── index.html          # The main HTML file containing all content and scripts
-├── Resume.pdf          # Resume file for the download link
-└── README.md           # This file
-
-Deployment
-This website is deployed and hosted using GitHub Pages. Any changes pushed to the main branch of this repository will be automatically deployed and updated on the live site.
+Inspired by minimal developer portfolios.  
+Made with ❤️ by Adithya Ram S.
