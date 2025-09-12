@@ -73,10 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    }, {
-        rootMargin: '-50% 0px -50% 0px',
-        threshold: 0
-    });
+    }, { rootMargin: '0px 0px -80% 0px', threshold: 0 });
+
     
     // Observe sections for navigation highlighting
     sections.forEach(section => {
