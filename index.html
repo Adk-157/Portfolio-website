@@ -15,47 +15,43 @@
     <div id="cursor-circle"></div>
     <div id="spotlight"></div>
 
-    <!-- Header with centered profile and horizontal navigation -->
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <ul class="nav-list">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header with centered profile -->
     <header class="header">
         <div class="profile-container">
             <div class="profile-image">
-                <img src="./images/DSC_9230.JPG" alt="Adithya Ram S Profile Picture" class="profile-photo">
+                <img src="images/profile.jpg" alt="Adithya Ram S Profile Picture" class="profile-photo">
             </div>
             <h1 class="profile-name">Adithya Ram S</h1>
         </div>
-        
-        <nav class="top-nav">
-            <ul class="nav-list">
-                <li><a href="#statement" class="nav-link">Personal Statement</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Work Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects & Work Samples</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Awards & Certifications</a></li>
-                <li><a href="#extracurriculars" class="nav-link">Extracurriculars</a></li>
-                <li><a href="#contact" class="nav-link">Contact & Resume</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
-        <section id="statement" class="content-section">
+        <section id="about" class="content-section">
             <h2 class="section-title fade-in-item">Personal Statement</h2>
             <div class="statement-content">
                 <p class="fade-in-item">I am a dedicated and passionate Electronics and Communication Engineering undergraduate at IIIT Sri City, with a strong academic record (CGPA: 8.29). My core interests lie at the intersection of hardware and software, specifically in VLSI Design, Quantum Computing, IoT Systems, and Embedded Programming.</p>
                 <p class="fade-in-item">I am driven by a curiosity to build innovative solutions for real-world challenges, particularly in smart mobility and hardware validation. Through internships and projects, I've gained hands-on experience in developing test automation dashboards, IoT-enabled systems with GPS tracking, and low-power communication protocols. I am always eager to learn and apply new technologies to create efficient and impactful systems.</p>
             </div>
-        </section>
-        
-        <section id="education" class="content-section">
-            <h2 class="section-title fade-in-item">Education</h2>
+
+            <h3 class="subsection-title fade-in-item">Education</h3>
             <div class="timeline-container">
                 <div class="timeline-item fade-in-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">2023 – 2027</div>
-                        <h3 class="timeline-title">Bachelor of Technology, ECE</h3>
+                        <h4 class="timeline-title">Bachelor of Technology, ECE</h4>
                         <p class="timeline-subtitle">Indian Institute of Information Technology, Sri City</p>
                         <p class="timeline-detail">Current CGPA: 8.29</p>
                     </div>
@@ -64,7 +60,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">2021 – 2023</div>
-                        <h3 class="timeline-title">Higher Secondary School (Class 12)</h3>
+                        <h4 class="timeline-title">Higher Secondary School (Class 12)</h4>
                         <p class="timeline-subtitle">Narayana Junior College, Chennai</p>
                         <p class="timeline-detail">Final Score: 93%</p>
                     </div>
@@ -79,7 +75,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">May – Jul 2025</div>
-                        <h3 class="timeline-title">Software Intern, Hardware Platform Solutions</h3>
+                        <h4 class="timeline-title">Software Intern, Hardware Platform Solutions</h4>
                         <p class="timeline-subtitle">Celestica India Pvt. Ltd., Chennai</p>
                         <ul class="timeline-list">
                             <li>Built a comprehensive test automation dashboard for hardware validation.</li>
@@ -92,13 +88,27 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">Jul – Aug 2025</div>
-                        <h3 class="timeline-title">Research Intern - Honours Project</h3>
+                        <h4 class="timeline-title">Research Intern - Honours Project</h4>
                         <p class="timeline-subtitle">IIIT Sri City</p>
                         <ul class="timeline-list">
                             <li>Developed an IoT-enabled e-cycle system with GPS tracking and IMU sensor integration.</li>
                             <li>Implemented a real-time data visualization dashboard using Firebase and Leaflet.js.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title fade-in-item">Extracurriculars & Leadership</h3>
+            <div class="extracurriculars-container">
+                <div class="extracurricular-item fade-in-item">
+                    <div class="extracurricular-date">Aug 2025 - Present</div>
+                    <h4 class="extracurricular-title">Club Lead, NexSync Smart Mobility Club</h4>
+                    <p class="extracurricular-description">Leading smart mobility research initiatives and vehicle-to-vehicle communication projects.</p>
+                </div>
+                <div class="extracurricular-item fade-in-item">
+                    <div class="extracurricular-date">Sep 2024 - Sep 2025</div>
+                    <h4 class="extracurricular-title">Co-Lead, Marketing Team</h4>
+                    <p class="extracurricular-description">Managed marketing for institute-level events and supervised promotional strategies.</p>
                 </div>
             </div>
         </section>
@@ -174,10 +184,8 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="achievements" class="content-section">
-            <h2 class="section-title fade-in-item">Awards & Certifications</h2>
+            <h3 class="subsection-title fade-in-item">Awards & Certifications</h3>
             <div class="certifications-grid">
                 <div class="cert-card fade-in-item">
                     <p class="cert-title">Verilog HDL: VLSI Masterclass</p>
@@ -194,22 +202,6 @@
                 <div class="cert-card fade-in-item">
                     <p class="cert-title">Marketing Team Co-Lead Recognition</p>
                     <p class="cert-issuer">IIIT Sri City</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="extracurriculars" class="content-section">
-            <h2 class="section-title fade-in-item">Extracurriculars & Leadership</h2>
-            <div class="extracurriculars-container">
-                <div class="extracurricular-item fade-in-item">
-                    <div class="extracurricular-date">Aug 2025 - Present</div>
-                    <h4 class="extracurricular-title">Club Lead, NexSync Smart Mobility Club</h4>
-                    <p class="extracurricular-description">Leading smart mobility research initiatives and vehicle-to-vehicle communication projects.</p>
-                </div>
-                <div class="extracurricular-item fade-in-item">
-                    <div class="extracurricular-date">Sep 2024 - Sep 2025</div>
-                    <h4 class="extracurricular-title">Co-Lead, Marketing Team</h4>
-                    <p class="extracurricular-description">Managed marketing for institute-level events and supervised promotional strategies.</p>
                 </div>
             </div>
         </section>

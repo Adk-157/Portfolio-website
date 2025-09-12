@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 120; // Account for sticky header
+                const offsetTop = targetElement.offsetTop - 100; // Account for fixed header
                 
                 window.scrollTo({
                     top: offsetTop,
