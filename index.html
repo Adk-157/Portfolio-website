@@ -1,241 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adithya Ram S | ECE Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adithya Ram S | Embedded Systems & VLSI Portfolio</title>
+
+  <!-- Fonts & icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="index.css">
+
+  <meta name="description" content="Adithya Ram S — Embedded systems, IoT, VLSI research. Honours research intern at IIIT Sri City. NexSync Lead." />
 </head>
 <body>
-    <div id="cursor-dot"></div>
-    <div id="cursor-circle"></div>
-    <div id="spotlight"></div>
+  <!-- Minimal top bar -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-name">Adithya Ram S</span>
+        <span class="brand-sub">B.Tech (Honours) • ECE</span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#profile">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Fixed Top Navigation Bar -->
-    <nav class="top-nav">
-        <ul class="nav-list">
-            <li><a href="#profile" class="nav-link">About</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+  <main class="main-content container">
+    <!-- PROFILE -->
+    <section id="profile" class="section profile">
+      <div class="profile-grid">
+        <div class="profile-left">
+          <img src="./images/DSC_9230.JPG" alt="Adithya Ram S" class="profile-photo" />
+          <div class="badges">
+            <span class="badge badge-available">Available: Summer 2026 (May–Jul) • SLP (Jul–Dec)</span>
+            <a class="badge badge-nexsync" href="https://www.linkedin.com/in/nexsync-iiits-6b698032b/" target="_blank">NexSync • Smart Mobility</a>
+          </div>
+        </div>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Profile Section (now part of scrollable content) -->
-        <section id="profile" class="content-section profile-section">
-            <div class="profile-container fade-in-item">
-                <div class="profile-image">
-                    <img src="./images/DSC_9230.JPG" alt="Adithya Ram S Profile Picture" class="profile-photo">
-                </div>
-                <h1 class="profile-name fade-in-item">Adithya Ram S</h1>
-            </div>
+        <div class="profile-right">
+          <h1 class="name">Adithya Ram S</h1>
+          <p class="role">Embedded Systems • IoT • CPS • Mixed-Signal VLSI</p>
 
-            <h2 class="section-title fade-in-item">Personal Statement</h2>
-            <div class="statement-content">
-                <p class="fade-in-item">I am a dedicated and passionate Electronics and Communication Engineering undergraduate at IIIT Sri City, with a strong academic record (CGPA: 8.29). My core interests lie at the intersection of hardware and software, specifically in VLSI Design, Quantum Computing, IoT Systems, and Embedded Programming.</p>
-                <p class="fade-in-item">I am driven by a curiosity to build innovative solutions for real-world challenges, particularly in smart mobility and hardware validation. Through internships and projects, I've gained hands-on experience in developing test automation dashboards, IoT-enabled systems with GPS tracking, and low-power communication protocols. I am always eager to learn and apply new technologies to create efficient and impactful systems.</p>
-            </div>
+          <div class="personal-statement">
+            <p>
+              I design and build hardware-aware embedded systems that bridge sensors, firmware and reliable production workflows.
+              Currently a B.Tech (Honours) ECE student at IIIT Sri City working on patent-linked IoT mobility systems, mixed-signal DAC modelling,
+              and real-world hazard detection pipelines. My work spans microcontroller firmware (ESP32, PIC, 8051), SBCs (Raspberry Pi),
+              multi-sensor fusion (IMU, GPS), low-power long-range comms (LoRa, ESP-NOW), and circuit simulation (LTSpice).
+            </p>
+            <p>
+              I enjoy product-grade bring-up: peripheral integration, signal debugging with logic analyzers/oscilloscopes,
+              telemetry pipelines, and end-to-end validation. Looking for internships in embedded/automotive/EV electronics and hardware systems.
+            </p>
+          </div>
 
-            <h3 class="subsection-title fade-in-item">Education</h3>
-            <div class="timeline-container">
-                <div class="timeline-item fade-in-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 – 2027</div>
-                        <h4 class="timeline-title">Bachelor of Technology, ECE</h4>
-                        <p class="timeline-subtitle">Indian Institute of Information Technology, Sri City</p>
-                        <p class="timeline-detail">Current CGPA: 8.29</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 – 2023</div>
-                        <h4 class="timeline-title">Higher Secondary School (Class 12)</h4>
-                        <p class="timeline-subtitle">Narayana Junior College, Chennai</p>
-                        <p class="timeline-detail">Final Score: 93%</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="quick-links">
+            <a href="mailto:adithya395672@gmail.com" class="link"><i class="fas fa-envelope"></i> adithya395672@gmail.com</a>
+            <a href="https://github.com/Adk-157" target="_blank" class="link"><i class="fab fa-github"></i> github.com/Adk-157</a>
+            <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" class="link"><i class="fab fa-linkedin"></i> linkedin.com/in/adithya-ram-s-514a6528a</a>
+            <a href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf" class="btn btn-small"><i class="fas fa-download"></i> Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="experience" class="content-section">
-            <h2 class="section-title fade-in-item">Work Experience</h2>
-            <div class="timeline-container">
-                <div class="timeline-item fade-in-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">May – Jul 2025</div>
-                        <h4 class="timeline-title">Software Intern, Hardware Platform Solutions</h4>
-                        <p class="timeline-subtitle">Celestica India Pvt. Ltd., Chennai</p>
-                        <ul class="timeline-list">
-                            <li>Built a comprehensive test automation dashboard for hardware validation.</li>
-                            <li>Developed an API-based rerun system with SSH integration for automated testing workflows.</li>
-                            <li>Improved database interaction and resolved qTest UI synchronization issues.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jul – Aug 2025</div>
-                        <h4 class="timeline-title">Research Intern - Honours Project</h4>
-                        <p class="timeline-subtitle">IIIT Sri City</p>
-                        <ul class="timeline-list">
-                            <li>Developed an IoT-enabled e-cycle system with GPS tracking and IMU sensor integration.</li>
-                            <li>Implemented a real-time data visualization dashboard using Firebase and Leaflet.js.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Experience</h2>
 
-            <h3 class="subsection-title fade-in-item">Extracurriculars & Leadership</h3>
-            <div class="extracurriculars-container">
-                <div class="extracurricular-item fade-in-item">
-                    <div class="extracurricular-date">Aug 2025 - Present</div>
-                    <h4 class="extracurricular-title">Club Lead, NexSync Smart Mobility Club</h4>
-                    <p class="extracurricular-description">Leading smart mobility research initiatives and vehicle-to-vehicle communication projects.</p>
-                </div>
-                <div class="extracurricular-item fade-in-item">
-                    <div class="extracurricular-date">Sep 2024 - Sep 2025</div>
-                    <h4 class="extracurricular-title">Co-Lead, Marketing Team</h4>
-                    <p class="extracurricular-description">Managed marketing for institute-level events and supervised promotional strategies.</p>
-                </div>
-            </div>
-        </section>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">May – Jul 2025</div>
+          <div class="timeline-body">
+            <h3>Software Intern — Hardware Platform Solutions</h3>
+            <p class="muted">Celestica India Pvt. Ltd., Chennai</p>
+            <ul>
+              <li>Built test automation orchestration and device communication pipelines for hardware validation.</li>
+              <li>Implemented API + SSH-based test rerun framework and improved validation throughput.</li>
+              <li>Worked closely with hardware testbeds; improved test synchronization and diagnostics workflows.</li>
+            </ul>
+          </div>
+        </div>
 
-        <section id="projects" class="content-section">
-            <h2 class="section-title fade-in-item">Projects & Work Samples</h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in-item">
-                    <h3 class="project-title">DRAG Pulse Simulation for Superconducting Qubits</h3>
-                    <p class="project-description">VLSI research on superconducting qubit controllers and DRAG pulse shaping to reduce spectral leakage.</p>
-                    <div class="project-tags">
-                        <span class="tag">VLSI</span>
-                        <span class="tag">Quantum Computing</span>
-                    </div>
-                </div>
-                <div class="project-card fade-in-item">
-                    <h3 class="project-title">SAFE-RHD 2.0: Hazard Detection</h3>
-                    <p class="project-description">Reproducing and enhancing an IoT framework for road safety using multi-sensor fusion for anomaly detection.</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT Framework</span>
-                        <span class="tag">ML</span>
-                    </div>
-                </div>
-                <div class="project-card fade-in-item">
-                    <h3 class="project-title">Smart Street Light with LoRa</h3>
-                    <p class="project-description">AC dimmer controlled street lighting system with remote monitoring via LoRa communication.</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">LoRa</span>
-                    </div>
-                </div>
-                <div class="project-card fade-in-item">
-                    <h3 class="project-title">Wi-Fi Jammer & Repeater</h3>
-                    <p class="project-description">Dual-purpose wireless network management system using an ESP8266 microcontroller.</p>
-                    <div class="project-tags">
-                        <span class="tag">ESP8266</span>
-                        <span class="tag">Networking</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="skills" class="content-section">
-            <h2 class="section-title fade-in-item">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category fade-in-item">
-                    <h3 class="skill-category-title">Programming & Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Embedded C</span>
-                        <span class="skill-tag">Verilog HDL</span>
-                        <span class="skill-tag">MATLAB</span>
-                    </div>
-                </div>
-                <div class="skill-category fade-in-item">
-                    <h3 class="skill-category-title">Microcontrollers & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">ESP32</span>
-                        <span class="skill-tag">ESP8266</span>
-                        <span class="skill-tag">Arduino</span>
-                    </div>
-                </div>
-                <div class="skill-category fade-in-item">
-                    <h3 class="skill-category-title">Tools & Protocols</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Arduino IDE</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Leaflet.js</span>
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">LoRa</span>
-                    </div>
-                </div>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Jul – Aug 2025</div>
+          <div class="timeline-body">
+            <h3>Research Intern — Honours Project (Embedded Systems)</h3>
+            <p class="muted">IIIT Sri City</p>
+            <ul>
+              <li>Developed patent-linked IoT e-cycle: ESP32 firmware, GPS & IMU fusion, telemetry and edge logic.</li>
+              <li>Built real-time dashboard (Firebase + Leaflet) for live telemetry and diagnostics.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h3 class="subsection-title fade-in-item">Awards & Certifications</h3>
-            <div class="certifications-grid">
-                <div class="cert-card fade-in-item">
-                    <p class="cert-title">Verilog HDL: VLSI Masterclass</p>
-                    <p class="cert-issuer">Udemy</p>
-                </div>
-                <div class="cert-card fade-in-item">
-                    <p class="cert-title">IoT and Autonomous Systems</p>
-                    <p class="cert-issuer">IIIT Sri City IEEE ITSS</p>
-                </div>
-                <div class="cert-card fade-in-item">
-                    <p class="cert-title">Internship on IoT with ESP32</p>
-                    <p class="cert-issuer">COGTIS Technologies</p>
-                </div>
-                <div class="cert-card fade-in-item">
-                    <p class="cert-title">Marketing Team Co-Lead Recognition</p>
-                    <p class="cert-issuer">IIIT Sri City</p>
-                </div>
-            </div>
-        </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
 
-        <section id="contact" class="content-section">
-            <h2 class="section-title fade-in-item">Contact & Resume</h2>
-            <div class="contact-container">
-                <p class="contact-intro fade-in-item">I'm currently seeking opportunities for internships and full-time roles. My inbox is always open, whether you have a question or just want to connect. Let's build something great together.</p>
-                <div class="contact-buttons fade-in-item">
-                    <a href="mailto:adithya395672@gmail.com" class="btn btn--primary contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Say Hello
-                    </a>
-                    <a href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf" class="btn btn--outline contact-btn">
-                        <i class="fas fa-download"></i>
-                        Download Resume
-                    </a>
-                </div>
-                <div class="social-section fade-in-item">
-                    <p class="social-label">Find me on</p>
-                    <div class="social-links">
-                        <a href="mailto:adithya395672@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://github.com/Adk-157" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+      <div class="cards-grid">
+        <!-- Smart Street Light -->
+        <article class="card">
+          <h3>Smart Street Light with LoRa</h3>
+          <p class="muted">IoT • LoRa • Power Electronics</p>
+          <p>AC dimmer-based streetlight with remote monitoring and adaptive dimming via LoRa telecommands. Designed remote control protocol & energy-efficient control loops.</p>
+          <div class="tags"><span>LoRa</span><span>AC Dimming</span><span>Energy</span></div>
+        </article>
 
-    <script src="index.js"></script>
+        <!-- UrbanSound8K -->
+        <article class="card">
+          <h3>UrbanSound8K — Pattern Recognition</h3>
+          <p class="muted">Audio ML • Data Pipeline</p>
+          <p>Data-loader & augmentation lead. Built CNN baseline and compared classical ML (SVM/KNN) with transfer-learning approaches (MobileNetV2).</p>
+          <div class="tags"><span>ML</span><span>Audio</span><span>CNN</span></div>
+        </article>
+
+        <!-- Wifi Jammer & Repeater -->
+        <article class="card">
+          <h3>Wi-Fi Jammer & Repeater</h3>
+          <p class="muted">ESP8266 • Networking</p>
+          <p>Dual-mode ESP8266 prototype for wireless signal control & management. Useful as a lab tool for controlled RF scenarios.</p>
+          <div class="tags"><span>ESP8266</span><span>Networking</span></div>
+        </article>
+
+        <!-- IoT E-cycle -->
+        <article class="card">
+          <h3>IoT E-Cycle — Real-time Telemetry</h3>
+          <p class="muted">ESP32 • GPS • IMU • ESP-NOW • LoRa</p>
+          <p>Patent-linked smart e-cycle platform: embedded firmware for sensor fusion, V2V experiments using ESP-NOW, low-power telemetry via LoRa, and cloud-backed visualization.</p>
+          <div class="tags"><span>ESP32</span><span>Telemetry</span><span>V2V</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <h2 class="section-title">Research Work</h2>
+
+      <div class="research-grid">
+        <div class="research-card">
+          <h3>SAFE-RHD 2.0 — Weather-Adaptive Skid Risk Assessment</h3>
+          <p class="muted">CPS • Edge ML • Mobility Safety</p>
+          <p>Developing sensor-fusion algorithms using IMU & wheel dynamics to detect skid risk. Implementing embedded inference pipelines and adaptive visualization. Ethics clearance in progress for low-speed data collection.</p>
+          <div class="tags"><span>Edge ML</span><span>IMU</span><span>Sensor Fusion</span></div>
+        </div>
+
+        <div class="research-card">
+          <h3>DAC Quantization Analysis for Quantum Control</h3>
+          <p class="muted">Mixed-Signal VLSI • LTSpice • Qiskit</p>
+          <p>Monte Carlo circuit-level DAC simulations and hybrid Qiskit + analytical system fidelity modelling. Studied quantization error propagation and waveform-level impacts on control fidelity.</p>
+          <div class="tags"><span>LTSpice</span><span>Qiskit</span><span>VLSI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h4>Programming</h4>
+          <p>C • C++ • Embedded C • Python • Verilog HDL • MATLAB</p>
+
+          <h4>MCUs & SBC</h4>
+          <p>ESP32 • ESP8266 • PIC • 8051 • Raspberry Pi</p>
+
+          <h4>Peripherals & Protocols</h4>
+          <p>GPIO • I2C • SPI • UART • PWM • ADC • CAN (familiar)</p>
+
+          <h4>Tools & Debug</h4>
+          <p>Logic Analyzer • Oscilloscope • JTAG / SWD (basic) • Git • PlatformIO • Arduino IDE</p>
+        </div>
+
+        <div class="skill-col">
+          <h4>Embedded Systems</h4>
+          <p>Firmware bring-up • Peripheral drivers • Sensor fusion • Telemetry pipelines • Low-power design</p>
+
+          <h4>Simulation & Modeling</h4>
+          <p>LTSpice • MATLAB basics • Python-based analysis • Qiskit (system-level)</p>
+
+          <h4>Communication</h4>
+          <p>LoRa • ESP-NOW • BLE • Wi-Fi</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert">Verilog HDL: VLSI Masterclass — Udemy</div>
+        <div class="cert">IoT & Autonomous Systems — IIIT Sri City (IEEE ITSS)</div>
+        <div class="cert">ESP32 IoT Internship — COGTIS Technologies</div>
+        <div class="cert">Marketing Team Co-Lead Recognition — IIIT Sri City</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <p>If you have internship or collaboration opportunities, or want to discuss embedded systems, VLSI or mobility projects — reach out.</p>
+
+      <div class="contact-row">
+        <a class="btn btn-primary" href="mailto:adithya395672@gmail.com"><i class="fas fa-envelope"></i> Say Hello</a>
+        <a class="btn btn-outline" href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf"><i class="fas fa-download"></i> Download Resume</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/Adk-157" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal JS placeholders (keep existing index.js if you have) -->
+  <script>
+    // Lightweight smooth scroll for nav links
+    document.querySelectorAll('.nav-list a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
 </body>
 </html>
