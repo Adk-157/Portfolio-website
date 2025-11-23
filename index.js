@@ -9,14 +9,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const x = e.clientX;
         const y = e.clientY;
         
-        cursorDot.style.left = x + 'px';
-        cursorDot.style.top = y + 'px';
+        if (cursorDot) {
+            cursorDot.style.left = x + 'px';
+            cursorDot.style.top = y + 'px';
+        }
         
-        cursorCircle.style.left = (x - 20) + 'px';
-        cursorCircle.style.top = (y - 20) + 'px';
+        if (cursorCircle) {
+            cursorCircle.style.left = (x - 20) + 'px';
+            cursorCircle.style.top = (y - 20) + 'px';
+        }
         
-        spotlight.style.setProperty('--x', x + 'px');
-        spotlight.style.setProperty('--y', y + 'px');
+        if (spotlight) {
+            spotlight.style.setProperty('--x', x + 'px');
+            spotlight.style.setProperty('--y', y + 'px');
+        }
     });
 
     // Cursor hover effects
@@ -24,30 +30,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     hoverElements.forEach(element => {
         element.addEventListener('mouseenter', () => {
-            cursorCircle.style.transform = 'scale(1.5)';
+            if (cursorCircle) {
+                cursorCircle.style.transform = 'scale(1.5)';
+            }
         });
         
         element.addEventListener('mouseleave', () => {
-            cursorCircle.style.transform = 'scale(1)';
+            if (cursorCircle) {
+                cursorCircle.style.transform = 'scale(1)';
+            }
         });
     });
 
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-list a');
+    // FIXED: Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-list a, a[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const href = link.getAttribute('href');
             
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
+            // Only handle anchor links (starting with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
                 
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Calculate offset accounting for fixed header
+                    const navHeight = document.querySelector('.top-nav')?.offsetHeight || 64;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = targetPosition - navHeight - 20; // Extra 20px padding
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
@@ -83,4 +102,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, 100);
+
+    // Active navigation highlighting on scroll
+    const sections = document.querySelectorAll('.section[id]');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const navHeight = document.querySelector('.top-nav')?.offsetHeight || 64;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.pageYOffset >= (sectionTop - navHeight - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        // Remove active class from all nav links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
 });
