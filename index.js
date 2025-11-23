@@ -20,20 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Cursor hover effects
-    const hoverElements = document.querySelectorAll('a, button, .project-card, .cert-card, .skill-tag, .timeline-item, .extracurricular-item');
+    const hoverElements = document.querySelectorAll('a, button, .card, .cert, .timeline-item, .extracurricular-item, .research-card');
     
     hoverElements.forEach(element => {
         element.addEventListener('mouseenter', () => {
-            document.body.classList.add('cursor-hover');
+            cursorCircle.style.transform = 'scale(1.5)';
         });
         
         element.addEventListener('mouseleave', () => {
-            document.body.classList.remove('cursor-hover');
+            cursorCircle.style.transform = 'scale(1)';
         });
     });
 
     // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-list a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 100; // Account for fixed header
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
                 
                 window.scrollTo({
                     top: offsetTop,
@@ -56,30 +56,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const fadeInObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const items = entry.target.querySelectorAll('.fade-in-item');
-                items.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('animate');
-                    }, index * 100);
-                });
+                entry.target.classList.add('animate');
             }
         });
-    }, { threshold: 0.1 });
-
-    // Observe all content sections
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        fadeInObserver.observe(section);
+    }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
 
-    // Initial animation for elements already in view
-    const initialItems = document.querySelectorAll('.fade-in-item');
-    initialItems.forEach((item, index) => {
-        const rect = item.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-            setTimeout(() => {
-                item.classList.add('animate');
-            }, index * 100);
-        }
+    // Observe all fade-in items individually
+    const fadeInItems = document.querySelectorAll('.fade-in-item');
+    fadeInItems.forEach((item, index) => {
+        // Add staggered delay based on index
+        item.style.transitionDelay = `${index * 0.05}s`;
+        fadeInObserver.observe(item);
     });
+
+    // Initial animation for elements already in view on page load
+    setTimeout(() => {
+        fadeInItems.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.top > 0) {
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 50);
+            }
+        });
+    }, 100);
 });
