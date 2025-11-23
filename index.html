@@ -16,7 +16,12 @@
   <meta name="description" content="Adithya Ram S — Embedded systems, IoT, VLSI research. Honours research intern at IIIT Sri City. NexSync Lead." />
 </head>
 <body>
-  <!-- Minimal top bar -->
+  <!-- Custom cursor effects -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-circle"></div>
+  <div id="spotlight"></div>
+
+  <!-- Minimal top bar with branding (Doc 3 style) -->
   <nav class="top-nav">
     <div class="nav-inner">
       <div class="brand">
@@ -35,10 +40,10 @@
   </nav>
 
   <main class="main-content container">
-    <!-- PROFILE -->
+    <!-- PROFILE (Doc 3 style with Doc 5 fade-in) -->
     <section id="profile" class="section profile">
       <div class="profile-grid">
-        <div class="profile-left">
+        <div class="profile-left fade-in-item">
           <img src="./images/DSC_9230.JPG" alt="Adithya Ram S" class="profile-photo" />
           <div class="badges">
             <span class="badge badge-available">Available: Summer 2026 (May–Jul) • SLP (Jul–Dec)</span>
@@ -47,23 +52,23 @@
         </div>
 
         <div class="profile-right">
-          <h1 class="name">Adithya Ram S</h1>
-          <p class="role">Embedded Systems • IoT • CPS • Mixed-Signal VLSI</p>
+          <h1 class="name fade-in-item">Adithya Ram S</h1>
+          <p class="role fade-in-item">Embedded Systems • IoT • CPS • Mixed-Signal VLSI</p>
 
           <div class="personal-statement">
-            <p>
+            <p class="fade-in-item">
               I design and build hardware-aware embedded systems that bridge sensors, firmware and reliable production workflows.
               Currently a B.Tech (Honours) ECE student at IIIT Sri City working on patent-linked IoT mobility systems, mixed-signal DAC modelling,
               and real-world hazard detection pipelines. My work spans microcontroller firmware (ESP32, PIC, 8051), SBCs (Raspberry Pi),
               multi-sensor fusion (IMU, GPS), low-power long-range comms (LoRa, ESP-NOW), and circuit simulation (LTSpice).
             </p>
-            <p>
+            <p class="fade-in-item">
               I enjoy product-grade bring-up: peripheral integration, signal debugging with logic analyzers/oscilloscopes,
               telemetry pipelines, and end-to-end validation. Looking for internships in embedded/automotive/EV electronics and hardware systems.
             </p>
           </div>
 
-          <div class="quick-links">
+          <div class="quick-links fade-in-item">
             <a href="mailto:adithya395672@gmail.com" class="link"><i class="fas fa-envelope"></i> adithya395672@gmail.com</a>
             <a href="https://github.com/Adk-157" target="_blank" class="link"><i class="fab fa-github"></i> github.com/Adk-157</a>
             <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" class="link"><i class="fab fa-linkedin"></i> linkedin.com/in/adithya-ram-s-514a6528a</a>
@@ -73,12 +78,12 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE (Doc 3 style with Doc 5 extracurriculars subsection) -->
     <section id="experience" class="section">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title fade-in-item">Experience</h2>
 
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item fade-in-item">
           <div class="timeline-meta">May – Jul 2025</div>
           <div class="timeline-body">
             <h3>Software Intern — Hardware Platform Solutions</h3>
@@ -91,7 +96,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item fade-in-item">
           <div class="timeline-meta">Jul – Aug 2025</div>
           <div class="timeline-body">
             <h3>Research Intern — Honours Project (Embedded Systems)</h3>
@@ -103,15 +108,29 @@
           </div>
         </div>
       </div>
+
+      <h3 class="subsection-title fade-in-item">Extracurriculars & Leadership</h3>
+      <div class="extracurriculars-container">
+        <div class="extracurricular-item fade-in-item">
+          <div class="extracurricular-date">Aug 2025 - Present</div>
+          <h4 class="extracurricular-title">Club Lead, NexSync Smart Mobility Club</h4>
+          <p class="extracurricular-description">Leading smart mobility research initiatives and vehicle-to-vehicle communication projects.</p>
+        </div>
+        <div class="extracurricular-item fade-in-item">
+          <div class="extracurricular-date">Sep 2024 - Sep 2025</div>
+          <h4 class="extracurricular-title">Co-Lead, Marketing Team</h4>
+          <p class="extracurricular-description">Managed marketing for institute-level events and supervised promotional strategies.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (Doc 3 style) -->
     <section id="projects" class="section">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title fade-in-item">Projects</h2>
 
       <div class="cards-grid">
         <!-- Smart Street Light -->
-        <article class="card">
+        <article class="card fade-in-item">
           <h3>Smart Street Light with LoRa</h3>
           <p class="muted">IoT • LoRa • Power Electronics</p>
           <p>AC dimmer-based streetlight with remote monitoring and adaptive dimming via LoRa telecommands. Designed remote control protocol & energy-efficient control loops.</p>
@@ -119,7 +138,7 @@
         </article>
 
         <!-- UrbanSound8K -->
-        <article class="card">
+        <article class="card fade-in-item">
           <h3>UrbanSound8K — Pattern Recognition</h3>
           <p class="muted">Audio ML • Data Pipeline</p>
           <p>Data-loader & augmentation lead. Built CNN baseline and compared classical ML (SVM/KNN) with transfer-learning approaches (MobileNetV2).</p>
@@ -127,7 +146,7 @@
         </article>
 
         <!-- Wifi Jammer & Repeater -->
-        <article class="card">
+        <article class="card fade-in-item">
           <h3>Wi-Fi Jammer & Repeater</h3>
           <p class="muted">ESP8266 • Networking</p>
           <p>Dual-mode ESP8266 prototype for wireless signal control & management. Useful as a lab tool for controlled RF scenarios.</p>
@@ -135,7 +154,7 @@
         </article>
 
         <!-- IoT E-cycle -->
-        <article class="card">
+        <article class="card fade-in-item">
           <h3>IoT E-Cycle — Real-time Telemetry</h3>
           <p class="muted">ESP32 • GPS • IMU • ESP-NOW • LoRa</p>
           <p>Patent-linked smart e-cycle platform: embedded firmware for sensor fusion, V2V experiments using ESP-NOW, low-power telemetry via LoRa, and cloud-backed visualization.</p>
@@ -144,19 +163,19 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
+    <!-- RESEARCH (Doc 3 style) -->
     <section id="research" class="section">
-      <h2 class="section-title">Research Work</h2>
+      <h2 class="section-title fade-in-item">Research Work</h2>
 
       <div class="research-grid">
-        <div class="research-card">
+        <div class="research-card fade-in-item">
           <h3>SAFE-RHD 2.0 — Weather-Adaptive Skid Risk Assessment</h3>
           <p class="muted">CPS • Edge ML • Mobility Safety</p>
           <p>Developing sensor-fusion algorithms using IMU & wheel dynamics to detect skid risk. Implementing embedded inference pipelines and adaptive visualization. Ethics clearance in progress for low-speed data collection.</p>
           <div class="tags"><span>Edge ML</span><span>IMU</span><span>Sensor Fusion</span></div>
         </div>
 
-        <div class="research-card">
+        <div class="research-card fade-in-item">
           <h3>DAC Quantization Analysis for Quantum Control</h3>
           <p class="muted">Mixed-Signal VLSI • LTSpice • Qiskit</p>
           <p>Monte Carlo circuit-level DAC simulations and hybrid Qiskit + analytical system fidelity modelling. Studied quantization error propagation and waveform-level impacts on control fidelity.</p>
@@ -165,12 +184,12 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS (Doc 3 style) -->
     <section id="skills" class="section">
-      <h2 class="section-title">Technical Skills</h2>
+      <h2 class="section-title fade-in-item">Technical Skills</h2>
 
       <div class="skills-grid">
-        <div class="skill-col">
+        <div class="skill-col fade-in-item">
           <h4>Programming</h4>
           <p>C • C++ • Embedded C • Python • Verilog HDL • MATLAB</p>
 
@@ -184,7 +203,7 @@
           <p>Logic Analyzer • Oscilloscope • JTAG / SWD (basic) • Git • PlatformIO • Arduino IDE</p>
         </div>
 
-        <div class="skill-col">
+        <div class="skill-col fade-in-item">
           <h4>Embedded Systems</h4>
           <p>Firmware bring-up • Peripheral drivers • Sensor fusion • Telemetry pipelines • Low-power design</p>
 
@@ -196,42 +215,33 @@
         </div>
       </div>
 
-      <h3 class="subsection-title">Certifications</h3>
+      <h3 class="subsection-title fade-in-item">Certifications</h3>
       <div class="cert-grid">
-        <div class="cert">Verilog HDL: VLSI Masterclass — Udemy</div>
-        <div class="cert">IoT & Autonomous Systems — IIIT Sri City (IEEE ITSS)</div>
-        <div class="cert">ESP32 IoT Internship — COGTIS Technologies</div>
-        <div class="cert">Marketing Team Co-Lead Recognition — IIIT Sri City</div>
+        <div class="cert fade-in-item">Verilog HDL: VLSI Masterclass — Udemy</div>
+        <div class="cert fade-in-item">IoT & Autonomous Systems — IIIT Sri City (IEEE ITSS)</div>
+        <div class="cert fade-in-item">ESP32 IoT Internship — COGTIS Technologies</div>
+        <div class="cert fade-in-item">Marketing Team Co-Lead Recognition — IIIT Sri City</div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (Doc 3 style with socials at bottom) -->
     <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-      <p>If you have internship or collaboration opportunities, or want to discuss embedded systems, VLSI or mobility projects — reach out.</p>
+      <h2 class="section-title fade-in-item">Contact</h2>
+      <p class="fade-in-item">If you have internship or collaboration opportunities, or want to discuss embedded systems, VLSI or mobility projects — reach out.</p>
 
-      <div class="contact-row">
+      <div class="contact-row fade-in-item">
         <a class="btn btn-primary" href="mailto:adithya395672@gmail.com"><i class="fas fa-envelope"></i> Say Hello</a>
         <a class="btn btn-outline" href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf"><i class="fas fa-download"></i> Download Resume</a>
       </div>
 
-      <div class="socials">
+      <div class="socials fade-in-item">
         <a href="https://github.com/Adk-157" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </section>
   </main>
 
-  <!-- Minimal JS placeholders (keep existing index.js if you have) -->
-  <script>
-    // Lightweight smooth scroll for nav links
-    document.querySelectorAll('.nav-list a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href');
-        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
-  </script>
+  <!-- External JS file (Doc 5 style) -->
+  <script src="index.js"></script>
 </body>
 </html>
