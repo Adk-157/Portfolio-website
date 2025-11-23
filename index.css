@@ -148,6 +148,8 @@ html,body {
 .profile-left {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 90px;
 }
 
 .profile-photo { 
@@ -215,38 +217,40 @@ html,body {
   font-size: 15px; 
 }
 
-/* Quick links - Fixed sidebar on left */
+/* Quick links - Below profile photo in 2x2 grid */
 .quick-links { 
-  position: fixed;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 50;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .quick-links .link { 
   color: #9ef6d8; 
   text-decoration: none; 
-  padding: 10px 12px; 
+  padding: 10px 8px; 
   border-radius: 8px; 
   background: rgba(2,4,6,0.8); 
   backdrop-filter: blur(8px);
   border: 1px solid rgba(0,255,170,0.1); 
-  font-size: 13px; 
+  font-size: 12px; 
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
-  white-space: nowrap;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.quick-links .link i {
+  font-size: 18px;
 }
 
 .quick-links .link:hover {
   background: rgba(0,255,170,0.08);
   border-color: rgba(0,255,170,0.25);
-  transform: translateX(4px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(0,255,170,0.15);
 }
 
@@ -629,20 +633,12 @@ html,body {
   
   .profile-left {
     align-items: center;
-  }
-  
-  /* Move quick links to bottom on mobile */
-  .quick-links {
     position: static;
-    transform: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
   }
   
-  .quick-links .link:hover {
-    transform: translateY(-2px);
+  /* Quick links stay in 2x2 grid on tablet */
+  .quick-links {
+    margin-top: 16px;
   }
   
   .timeline-meta { 
@@ -690,13 +686,19 @@ html,body {
     justify-content: center;
   }
   
+  /* Stack quick links vertically on small mobile */
   .quick-links {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: 1fr;
   }
   
   .quick-links .link {
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+  
+  .quick-links .link i {
+    font-size: 16px;
   }
   
   .availability-badge {
