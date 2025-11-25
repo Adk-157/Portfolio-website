@@ -43,30 +43,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // FIXED: Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-list a, a[href^="#"]');
+    // Select only the navigation bar links
+    const navLinks = document.querySelectorAll('.nav-list a');
     
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default immediately
             
-            // Only handle anchor links (starting with #)
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
+            const href = this.getAttribute('href');
+            console.log('Clicked link:', href); // Debug log
+            
+            // Remove the # to get the ID
+            const targetId = href.replace('#', '');
+            const targetElement = document.getElementById(targetId);
+            
+            console.log('Target element:', targetElement); // Debug log
+            
+            if (targetElement) {
+                // Get the navigation bar height
+                const navBar = document.querySelector('.top-nav');
+                const navHeight = navBar ? navBar.offsetHeight : 64;
                 
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
+                // Get the target position
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - navHeight - 20;
                 
-                if (targetElement) {
-                    // Calculate offset accounting for fixed header
-                    const navHeight = document.querySelector('.top-nav')?.offsetHeight || 64;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = targetPosition - navHeight - 20; // Extra 20px padding
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+                console.log('Scrolling to:', offsetPosition); // Debug log
+                
+                // Scroll to the position
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            } else {
+                console.error('Target element not found:', targetId);
             }
         });
     });
@@ -122,7 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove active class from all nav links
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
+            const linkHref = link.getAttribute('href').replace('#', '');
+            if (linkHref === current) {
                 link.classList.add('active');
             }
         });
