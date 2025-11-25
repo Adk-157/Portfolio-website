@@ -69,7 +69,14 @@ html,body {
   background: rgba(2,4,6,0.85); 
   backdrop-filter: blur(12px); 
   border-bottom: 1px solid rgba(0,255,170,0.08); 
-  z-index: 60; 
+  z-index: 60; /* Must be higher than other elements */
+  pointer-events: auto; /* Ensure it can receive clicks */
+}
+
+#cursor-dot,
+#cursor-circle,
+#spotlight {
+  pointer-events: none; /* This should already be set */
 }
 
 .top-nav .nav-inner { 
@@ -80,8 +87,8 @@ html,body {
   justify-content: space-between; 
   padding: 0 24px; 
   height: 100%; 
+  pointer-events: auto; /* Ensure it can receive clicks */
 }
-
 .brand { 
   display: flex; 
   flex-direction: column; 
@@ -117,7 +124,9 @@ html,body {
   font-size: 14px; 
   padding: 8px 10px; 
   border-radius: 6px; 
-  transition: all .18s ease; 
+  transition: all .18s ease;
+  pointer-events: auto; /* Ensure links can receive clicks */
+  cursor: pointer; /* Show it's clickable */
 }
 
 .nav-list a:hover { 
@@ -228,23 +237,30 @@ html,body {
 .quick-links .link { 
   color: #9ef6d8; 
   text-decoration: none; 
-  padding: 10px 8px; 
+  padding: 12px 10px; 
   border-radius: 8px; 
   background: rgba(2,4,6,0.8); 
   backdrop-filter: blur(8px);
   border: 1px solid rgba(0,255,170,0.1); 
-  font-size: 12px; 
+  font-size: 11px; 
   transition: all 0.2s ease;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
   text-align: center;
-  flex-direction: column;
+  min-height: 70px;
 }
 
 .quick-links .link i {
-  font-size: 18px;
+  font-size: 22px;
+  display: block;
+}
+
+.quick-links .link-text {
+  display: block;
+  font-weight: 500;
 }
 
 .quick-links .link:hover {
@@ -686,19 +702,20 @@ html,body {
     justify-content: center;
   }
   
-  /* Stack quick links vertically on small mobile */
+  /* Keep 2x2 grid even on mobile */
   .quick-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
   
   .quick-links .link {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px 12px;
+    padding: 10px 6px;
+    min-height: 65px;
+    font-size: 10px;
   }
   
   .quick-links .link i {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .availability-badge {
