@@ -13,7 +13,7 @@
   <!-- Your CSS -->
   <link rel="stylesheet" href="index.css">
 
-  <meta name="description" content="Adithya Ram S — Embedded systems, IoT, VLSI research. Honours research intern at IIIT Sri City. NexSync Lead." />
+  <meta name="description" content="Adithya Ram S — Embedded systems, IoT, VLSI research. Honours researcher at IIIT Sri City & IIT Madras. NexSync Lead." />
 </head>
 <body>
   <!-- Custom cursor effects -->
@@ -46,7 +46,7 @@
       <div class="profile-grid">
         <div class="profile-left fade-in-item">
           <img src="./images/DSC_9230.JPG" alt="Adithya Ram S" class="profile-photo" />
-          
+
           <div class="quick-links">
             <a href="mailto:adithya395672@gmail.com" class="link">
               <i class="fas fa-envelope"></i>
@@ -74,13 +74,15 @@
           <div class="personal-statement">
             <p class="fade-in-item">
               I design and build hardware-aware embedded systems that bridge sensors, firmware and reliable production workflows.
-              Currently a B.Tech (Honours) ECE student at IIIT Sri City working on patent-linked IoT mobility systems, mixed-signal DAC modelling,
-              and real-world hazard detection pipelines. My work spans microcontroller firmware (ESP32, PIC, 8051), SBCs (Raspberry Pi),
+              Currently a B.Tech (Honours) ECE student at IIIT Sri City working on skid-risk sensor fusion for Indian driving conditions,
+              RISC-V SoC architecture, mixed-signal DAC modelling, and — this summer — optical biosensing research at IIT Madras.
+              My work spans microcontroller firmware (ESP32, PIC, 8051, STM32), SBCs (Raspberry Pi), FPGA/RTL design (Verilog, SystemVerilog),
               multi-sensor fusion (IMU, GPS), low-power long-range comms (LoRa, ESP-NOW), and circuit simulation (LTSpice).
             </p>
             <p class="fade-in-item">
               I enjoy product-grade bring-up: peripheral integration, signal debugging with logic analyzers/oscilloscopes,
-              telemetry pipelines, and end-to-end validation. Looking for internships in embedded/automotive/EV electronics and hardware systems.
+              telemetry pipelines, and end-to-end validation. Looking for internships and research collaborations in embedded/automotive/EV
+              electronics, FPGA, and edge AI systems.
             </p>
           </div>
         </div>
@@ -97,7 +99,7 @@
           <div class="timeline-body">
             <h3>B.Tech (Honours) in Electronics and Communication Engineering</h3>
             <p class="muted">Indian Institute of Information Technology Sri City</p>
-            <p><strong>CGPA:</strong> 8.29 / 10.0</p>
+            <p><strong>CGPA:</strong> 8.43 / 10.0</p>
           </div>
         </div>
 
@@ -118,14 +120,26 @@
 
       <div class="timeline">
         <div class="timeline-item fade-in-item">
+          <div class="timeline-meta">Jun – Jul 2026</div>
+          <div class="timeline-body">
+            <h3>Research Intern — Photonics & Biosensors Lab</h3>
+            <p class="muted">Indian Institute of Technology Madras</p>
+            <ul>
+              <li>Working under Dr. Shivananju B.N. on optical biosensing, graphene-based sensing, and plasmonics.</li>
+              <li>Contributing to Doppler-based optical wave sensing research with applications in physiological monitoring.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-item">
           <div class="timeline-meta">May – Jul 2025</div>
           <div class="timeline-body">
             <h3>Software Intern — Hardware Platform Solutions</h3>
             <p class="muted">Celestica India Pvt. Ltd., Chennai</p>
             <ul>
-              <li>Built test automation orchestration and device communication pipelines for hardware validation.</li>
-              <li>Implemented API + SSH-based test rerun framework and improved validation throughput.</li>
-              <li>Worked closely with hardware testbeds; improved test synchronization and diagnostics workflows.</li>
+              <li>Built Python-based test automation and orchestration tooling using SSH and REST APIs.</li>
+              <li>Implemented an API + SSH-based test rerun framework to reduce manual re-triggering of test suites.</li>
+              <li>Worked on device communication pipelines supporting the platform team's test workflows.</li>
             </ul>
           </div>
         </div>
@@ -133,11 +147,12 @@
         <div class="timeline-item fade-in-item">
           <div class="timeline-meta">Jul – Aug 2025</div>
           <div class="timeline-body">
-            <h3>Research Intern — Honours Project (Embedded Systems)</h3>
+            <h3>Research Intern — Smart Transportation Lab</h3>
             <p class="muted">IIIT Sri City</p>
             <ul>
               <li>Developed patent-linked IoT e-cycle: ESP32 firmware, GPS & IMU fusion, telemetry and edge logic.</li>
               <li>Built real-time dashboard (Firebase + Leaflet) for live telemetry and diagnostics.</li>
+              <li>Provisional patent filed on the platform.</li>
             </ul>
           </div>
         </div>
@@ -164,11 +179,43 @@
       <h2 class="section-title fade-in-item">Projects</h2>
 
       <div class="cards-grid">
+        <!-- Rebel SoC -->
+        <article class="card fade-in-item">
+          <h3>Rebel SoC — RISC-V (RV32IMC)</h3>
+          <p class="muted">Computer Architecture • RTL • Verification</p>
+          <p>Rewrote the AXI4-Lite interconnect for a RISC-V SoC and built a self-checking testbench passing 53 verification checks.</p>
+          <div class="tags"><span>RISC-V</span><span>AXI4-Lite</span><span>Verification</span></div>
+        </article>
+
+        <!-- FPGA Hackathon -->
+        <article class="card fade-in-item">
+          <h3>Siren Detection Accelerator — FPGA Hackathon 2026</h3>
+          <p class="muted">Edge AI • FPGA • Zynq-7020</p>
+          <p>Built an INT8 CNN accelerator for emergency-vehicle siren detection on a Xilinx Zynq-7020 with Team Dual Core; selected to the poster round.</p>
+          <div class="tags"><span>Zynq-7020</span><span>CNN</span><span>Edge AI</span></div>
+        </article>
+
+        <!-- Intelligent Collision Warning -->
+        <article class="card fade-in-item">
+          <h3>Intelligent Collision Warning System</h3>
+          <p class="muted">Edge AI • Raspberry Pi • Computer Vision</p>
+          <p>Zone-based threat detection pipeline on Raspberry Pi 4 using MobileNetSSD for real-time collision-risk alerts.</p>
+          <div class="tags"><span>MobileNetSSD</span><span>Raspberry Pi</span><span>Edge AI</span></div>
+        </article>
+
+        <!-- IoT E-cycle -->
+        <article class="card fade-in-item">
+          <h3>IoT E-Cycle — Real-time Telemetry</h3>
+          <p class="muted">ESP32 • GPS • IMU • ESP-NOW • LoRa</p>
+          <p>Smart e-cycle platform: embedded firmware for sensor fusion, V2V experiments using ESP-NOW, low-power telemetry via LoRa, and cloud-backed visualization. Provisional patent filed.</p>
+          <div class="tags"><span>ESP32</span><span>Telemetry</span><span>V2V</span></div>
+        </article>
+
         <!-- Smart Street Light -->
         <article class="card fade-in-item">
           <h3>Smart Street Light with LoRa</h3>
           <p class="muted">IoT • LoRa • Power Electronics</p>
-          <p>AC dimmer-based streetlight with remote monitoring and adaptive dimming via LoRa telecommands. Designed remote control protocol & energy-efficient control loops.</p>
+          <p>AC dimmer-based streetlight with remote monitoring and adaptive dimming via LoRa telecommands; later adopted in modified form on campus.</p>
           <div class="tags"><span>LoRa</span><span>AC Dimming</span><span>Energy</span></div>
         </article>
 
@@ -179,22 +226,6 @@
           <p>Data-loader & augmentation lead. Built CNN baseline and compared classical ML (SVM/KNN) with transfer-learning approaches (MobileNetV2).</p>
           <div class="tags"><span>ML</span><span>Audio</span><span>CNN</span></div>
         </article>
-
-        <!-- Wifi Jammer & Repeater -->
-        <article class="card fade-in-item">
-          <h3>Wi-Fi Jammer & Repeater</h3>
-          <p class="muted">ESP8266 • Networking</p>
-          <p>Dual-mode ESP8266 prototype for wireless signal control & management. Useful as a lab tool for controlled RF scenarios.</p>
-          <div class="tags"><span>ESP8266</span><span>Networking</span></div>
-        </article>
-
-        <!-- IoT E-cycle -->
-        <article class="card fade-in-item">
-          <h3>IoT E-Cycle — Real-time Telemetry</h3>
-          <p class="muted">ESP32 • GPS • IMU • ESP-NOW • LoRa</p>
-          <p>Patent-linked smart e-cycle platform: embedded firmware for sensor fusion, V2V experiments using ESP-NOW, low-power telemetry via LoRa, and cloud-backed visualization.</p>
-          <div class="tags"><span>ESP32</span><span>Telemetry</span><span>V2V</span></div>
-        </article>
       </div>
     </section>
 
@@ -204,10 +235,24 @@
 
       <div class="research-grid">
         <div class="research-card fade-in-item">
-          <h3>SAFE-RHD 2.0 — Weather-Adaptive Skid Risk Assessment</h3>
+          <h3>SKRAID — Skid Risk Assessment in Indian Driving Conditions</h3>
           <p class="muted">CPS • Edge ML • Mobility Safety</p>
-          <p>Developing sensor-fusion algorithms using IMU & wheel dynamics to detect skid risk. Implementing embedded inference pipelines and adaptive visualization. Ethics clearance in progress for low-speed data collection.</p>
+          <p>Primary honours research project. Built a multithreaded acquisition pipeline (Raspberry Pi 4, IMU, GPS, camera) across ~31 driving sessions, and developed the R_skid risk model combining IMU, GPS, visual, and environmental features. Currently working on model retraining, on-device inference benchmarking, and a paper targeting IEEE INDICON / Springer ICCIDS.</p>
           <div class="tags"><span>Edge ML</span><span>IMU</span><span>Sensor Fusion</span></div>
+        </div>
+
+        <div class="research-card fade-in-item">
+          <h3>Optical Biosensing & Plasmonics</h3>
+          <p class="muted">Photonics • Graphene • IIT Madras</p>
+          <p>Ongoing research stint at IIT Madras's Photonics & Biosensors Lab under Dr. Shivananju B.N., covering graphene-based sensing, optical biosensors, and plasmonics — including Doppler-based optical wave sensing.</p>
+          <div class="tags"><span>Graphene</span><span>Plasmonics</span><span>Biosensors</span></div>
+        </div>
+
+        <div class="research-card fade-in-item">
+          <h3>CIM Neural Network Inference Accelerator</h3>
+          <p class="muted">Mixed-Signal VLSI • Compute-in-Memory • 22nm</p>
+          <p>Course research project on a compute-in-memory neural network inference accelerator at 22nm HP; circuit-level modelling in LTSpice and MATLAB. Phases 1 & 2 complete.</p>
+          <div class="tags"><span>LTSpice</span><span>CIM</span><span>VLSI</span></div>
         </div>
 
         <div class="research-card fade-in-item">
@@ -226,16 +271,16 @@
       <div class="skills-grid">
         <div class="skill-col fade-in-item">
           <h4>Programming</h4>
-          <p>C • C++ • Embedded C • Python • Verilog HDL • MATLAB</p>
+          <p>C • C++ • Embedded C • Python • Verilog HDL • SystemVerilog • MATLAB</p>
 
           <h4>MCUs & SBC</h4>
-          <p>ESP32 • ESP8266 • PIC • 8051 • Raspberry Pi</p>
+          <p>ESP32 • ESP8266 • PIC • 8051 • STM32 (familiar) • Raspberry Pi</p>
 
           <h4>Peripherals & Protocols</h4>
           <p>GPIO • I2C • SPI • UART • PWM • ADC • CAN (familiar)</p>
 
           <h4>Tools & Debug</h4>
-          <p>Logic Analyzer • Oscilloscope • JTAG / SWD (basic) • Git • PlatformIO • Arduino IDE</p>
+          <p>Logic Analyzer • Oscilloscope • JTAG / SWD (basic) • Git • Linux • PlatformIO • Arduino IDE</p>
         </div>
 
         <div class="skill-col fade-in-item">
@@ -243,7 +288,7 @@
           <p>Firmware bring-up • Peripheral drivers • Sensor fusion • Telemetry pipelines • Low-power design</p>
 
           <h4>Simulation & Modeling</h4>
-          <p>LTSpice • MATLAB basics • Python-based analysis • Qiskit (system-level)</p>
+          <p>LTSpice • MATLAB • Python-based analysis • Qiskit (system-level)</p>
 
           <h4>Communication</h4>
           <p>LoRa • ESP-NOW • BLE • Wi-Fi</p>
@@ -262,12 +307,12 @@
     <!-- CONTACT -->
     <section id="contact" class="section">
       <h2 class="section-title fade-in-item">Contact</h2>
-      
+
       <div class="availability-badge fade-in-item">
         <i class="fas fa-calendar-check"></i>
         <div>
           <strong>Available for Opportunities</strong>
-          <p>Summer 2026 Internship (May–July) • SLP (July–December)</p>
+          <p>Research stint at IIT Madras through Jul 2026 • Open to Winter/SLP internships (Dec 2026 onward)</p>
         </div>
       </div>
 
