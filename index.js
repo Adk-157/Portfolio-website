@@ -1,11 +1,39 @@
 // Portfolio interactions:
 //  1. highlight the current section in the top bar
-//  2. the lock-in amplifier demo in the hero
+//  2. load and scroll motion (name letters, reveals)
+//  3. the lock-in amplifier demo
+// The particle scene behind the page lives in scene.js.
+
+document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initMotion();
   initScope();
 });
+
+/* ---------- Load and scroll motion ---------- */
+function initMotion() {
+  // Split the name into letters so they can rise in one by one.
+  document.querySelectorAll('.split').forEach(el => {
+    const text = el.textContent; el.textContent = ''; el.setAttribute('aria-label', text);
+    let i = 0;
+    text.split(' ').forEach((word, w, all) => {
+      const span = document.createElement('span'); span.style.whiteSpace = 'nowrap'; span.setAttribute('aria-hidden', 'true');
+      [...word].forEach(c => { const ch = document.createElement('span'); ch.className = 'ch'; ch.style.setProperty('--i', i++); ch.textContent = c; span.appendChild(ch); });
+      el.appendChild(span);
+      if (w < all.length - 1) el.appendChild(document.createTextNode(' '));
+    });
+  });
+
+  // Reveal blocks as they scroll in, staggered within each column.
+  const items = [...document.querySelectorAll('.rv')];
+  if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.filter(e => e.isIntersecting).forEach((e, k) => { e.target.style.setProperty('--d', k); e.target.classList.add('in'); io.unobserve(e.target); });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  items.forEach(el => io.observe(el));
+}
 
 /* ---------- Section highlight ---------- */
 function initNav() {
@@ -20,7 +48,7 @@ function initNav() {
     const current = sections.find(s => visible.has(s.id));
     links.forEach(a => a.removeAttribute('aria-current'));
     if (current) byId.get(current.id).setAttribute('aria-current', 'true');
-  }, { rootMargin: '-30% 0px -60% 0px' });
+  }, { rootMargin: '-45% 0px -50% 0px' });
   sections.forEach(s => io.observe(s));
 }
 

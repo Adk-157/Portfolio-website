@@ -6,16 +6,19 @@ Welcome to my personal portfolio! This web application showcases my projects, sk
 
 ## Features
 
-- **Circuit-board theme:** solder-mask green, silkscreen-white type, gold accents.
-- **Live lock-in amplifier demo:** a small signal-processing simulation in the hero (`index.js`) with adjustable noise and filter time constant.
-- **Responsive and accessible:** works down to phone widths, keyboard focus styles, respects reduced-motion settings.
+- **Scroll-driven particle scene:** about 26,000 WebGL particles sit behind the page and reshape themselves for each section (FPGA chip, wheel, leaf, signal in noise, sensor mesh, helix, vortex). They tilt toward and scatter around the pointer. Written directly against WebGL in `scene.js`, no libraries.
+- **Live lock-in amplifier demo:** a small signal-processing simulation with adjustable noise and filter time constant (`index.js`).
+- **Motion:** letter-by-letter name on load, scroll reveals, a ticker.
+- **Responsive and accessible:** works down to phone widths, keyboard focus styles, and a still mode for people who prefer reduced motion.
 - **No external dependencies:** plain HTML, CSS and JavaScript; fonts are self-hosted in `/fonts`.
+
+To give a section its own shape, set `data-shape` (and `data-side="left|right|center"`) on its `<section>` in `index.html`.
 
 ---
 
 ## Technologies Used
 
-- HTML5, CSS3, vanilla JavaScript (Canvas 2D)
+- HTML5, CSS3, vanilla JavaScript (WebGL and Canvas 2D)
 - Saira Condensed and IBM Plex Sans (SIL Open Font License, see `fonts/LICENSE.txt`)
 
 ---
