@@ -1,29 +1,25 @@
 # Adithya Ram S Portfolio
 
-Welcome to my personal portfolio! This web application showcases my projects, skills, certifications, academic timeline, and ways to get in touch. It is built with modern standards, is responsive, interactive, and focused on a clean, minimal dark aesthetic.
+Welcome to my personal portfolio! This web application showcases my projects, skills, certifications, academic timeline, and ways to get in touch. It is a single static page with no build step.
 
 ---
 
-## 🚀 Features
+## Features
 
-- **Responsive Design:** Optimized for desktops, tablets, and mobile devices.
-- **Minimal Dark Theme:** Clean black/gray palette with strong focus on content.
-- **Custom Cursor & Spotlight:** Interactive cursor and hover spotlight effect.
-- **Typing Animation:** Animated subtitle with dynamic text under the name.
-- **Smooth Navigation:** Easy scrolling between sections with highlight on active section.
-- **Project Showcase:** Projects shown as stylish cards with tags.
-- **Timeline Sections:** Visual timelines for education and work experience.
-- **Skills & Certifications:** Tag-based skill categories and a certifications grid.
-- **Contact Section:** Easy ways to connect (email, GitHub, LinkedIn) and one-click resume download.
+- **Scroll-driven particle scene:** about 26,000 WebGL particles sit behind the page and reshape themselves for each section (FPGA chip, wheel, leaf, signal in noise, sensor mesh, helix, vortex). They tilt toward and scatter around the pointer. Written directly against WebGL in `scene.js`, no libraries.
+- **Live lock-in amplifier demo:** a small signal-processing simulation with adjustable noise and filter time constant (`index.js`).
+- **Motion:** letter-by-letter name on load, scroll reveals, a ticker.
+- **Responsive and accessible:** works down to phone widths, keyboard focus styles, and a still mode for people who prefer reduced motion.
+- **No external dependencies:** plain HTML, CSS and JavaScript; fonts are self-hosted in `/fonts`.
+
+To give a section its own shape, set `data-shape` (and `data-side="left|right|center"`) on its `<section>` in `index.html`.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-- **HTML5 & CSS3:** Semantic markup and custom styling.
-- **JavaScript:** For interactions, cursor, typing, and scroll animations.
-- **Font Awesome:** For icons in profile and contact.
-- **Google Fonts:** Inter font for sleek typography.
+- HTML5, CSS3, vanilla JavaScript (WebGL and Canvas 2D)
+- Saira Condensed and IBM Plex Sans (SIL Open Font License, see `fonts/LICENSE.txt`)
 
 ---
 
@@ -34,9 +30,7 @@ Welcome to my personal portfolio! This web application showcases my projects, sk
  ```bash
    git clone https://github.com/Adk-157/Portfolio-website.git
    ```
-2. **Add your profile photo:**
-- Place your image (e.g., `profile.jpg`) in the `/images/` folder and set the path in `index.html`.
-3. **Open the site:**
+2. **Open the site:**
 - Open `index.html` directly in your browser.
 
 ---
