@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adithya Ram S | Embedded systems, FPGA and sensing</title>
   <meta name="description" content="Adithya Ram S. B.Tech (Honours) ECE student at IIIT Sri City working on embedded systems, FPGA design, edge AI and sensing systems.">
-  <meta name="theme-color" content="#0c3b2e">
-
+  <meta name="theme-color" content="#082a21">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <a class="skip" href="#research">Skip to content</a>
+  <canvas id="scene" aria-hidden="true"></canvas>
 
   <header class="top">
     <nav class="top-inner" aria-label="Sections">
@@ -26,259 +26,250 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero wrap">
-      <div class="hero-text">
-        <h1>Adithya Ram S</h1>
-        <p class="hero-lede">
+    <!-- HERO: the cloud is an FPGA package -->
+    <section id="home" class="stage hero" data-shape="chip" data-side="right" data-hero>
+      <div class="col">
+        <h1 class="split">Adithya Ram S</h1>
+        <p class="lede rv">
           I build sensing systems end to end: the firmware that reads the sensor,
           the digital logic that processes it, and the model that turns it into a decision.
         </p>
-        <p class="hero-sub">
-          Final-year B.Tech (Honours) student in Electronics and Communication Engineering
-          at IIIT Sri City, working on embedded systems, FPGA design and edge AI.
-        </p>
-        <ul class="hero-links">
+        <div class="who rv">
+          <img src="images/adithya.jpg" width="800" height="1000" alt="Portrait of Adithya Ram S">
+          <p>Final-year B.Tech (Honours) student in Electronics and Communication Engineering at IIIT Sri City, working on embedded systems, FPGA design and edge AI.</p>
+        </div>
+        <ul class="links rv">
           <li><a class="btn btn-solid" href="mailto:adithya395672@gmail.com">Email me</a></li>
           <li><a class="btn" href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf">Download resume</a></li>
           <li><a class="btn" href="https://github.com/Adk-157" target="_blank" rel="noopener">GitHub</a></li>
           <li><a class="btn" href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
-      </div>
-      <img class="hero-photo" src="images/adithya.jpg" width="800" height="1000" alt="Portrait of Adithya Ram S">
-    </section>
-
-    <!-- LIVE DEMO -->
-    <section class="wrap" aria-labelledby="scope-title">
-      <div class="scope">
-        <div class="scope-head">
-          <h2 id="scope-title" class="scope-title">Find the signal</h2>
-          <p>
-            A 50&nbsp;Hz tone of amplitude 0.50 is buried in noise. A lock-in amplifier multiplies the input
-            by a reference and low-pass filters the result to recover it. This one runs in your browser;
-            I am building a streaming FPGA version on a ZCU104.
-          </p>
-        </div>
-
-        <div class="scope-body">
-          <div class="scope-plots">
-            <figure>
-              <figcaption>Input: tone plus noise <span class="key key-gold">the tone alone</span></figcaption>
-              <canvas id="plot-in" height="150" role="img" aria-label="Noisy input signal with the hidden tone overlaid"></canvas>
-            </figure>
-            <figure>
-              <figcaption>Lock-in output: recovered amplitude <span class="key key-dash">true value 0.50</span></figcaption>
-              <canvas id="plot-out" height="150" role="img" aria-label="Recovered amplitude over time, settling toward 0.50"></canvas>
-            </figure>
-          </div>
-
-          <div class="scope-side">
-            <label for="noise">Noise level</label>
-            <input id="noise" type="range" min="0" max="4" step="0.05" value="1.5">
-
-            <label for="tau">Filter time constant <output id="tau-out" for="tau">0.30 s</output></label>
-            <input id="tau" type="range" min="0" max="100" step="1" value="50">
-
-            <dl class="readout" aria-live="off">
-              <div><dt>Input SNR</dt><dd id="r-snr">–</dd></div>
-              <div><dt>Recovered</dt><dd id="r-amp">–</dd></div>
-              <div><dt>Error</dt><dd id="r-err">–</dd></div>
-            </dl>
-            <p class="scope-hint">Push the noise up, then lengthen the time constant and watch the estimate steady.</p>
-          </div>
-        </div>
+        <p class="scrollcue rv" aria-hidden="true"><span></span>Scroll, and move your cursor through the particles</p>
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="research" class="wrap block">
-      <h2 class="via">Research</h2>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-run">
+        <span>Embedded systems</span><span>FPGA design</span><span>Edge AI</span><span>Sensor fusion</span><span>Verilog</span><span>Raspberry Pi</span><span>ESP32</span><span>LoRa</span><span>Signal processing</span>
+        <span>Embedded systems</span><span>FPGA design</span><span>Edge AI</span><span>Sensor fusion</span><span>Verilog</span><span>Raspberry Pi</span><span>ESP32</span><span>LoRa</span><span>Signal processing</span>
+      </div>
+    </div>
 
-      <article class="feature">
-        <div class="feature-main">
-          <h3>SKRAID: Skid Risk Assessment in Indian Driving Conditions</h3>
-          <p class="where">Honours research project, IIIT Sri City</p>
-          <p>
-            A two-wheeler-mounted sensing rig and risk model that estimates skid risk from how the vehicle
-            is moving and what the road looks like. I built the multithreaded acquisition pipeline on a
-            Raspberry Pi 4, collected the dataset over about 31 riding sessions, and developed the
-            R<sub>skid</sub> model, which combines IMU, GPS, visual and environmental features.
-          </p>
-        </div>
-        <dl class="facts">
+    <!-- RESEARCH 1: a rolling wheel -->
+    <section id="research" class="stage" data-shape="wheel" data-side="right">
+      <div class="col">
+        <p class="kicker rv">Research</p>
+        <h2 class="rv">SKRAID: Skid Risk Assessment in Indian Driving Conditions</h2>
+        <p class="where rv">Honours research project, IIIT Sri City</p>
+        <p class="rv">
+          A two-wheeler-mounted sensing rig and risk model that estimates skid risk from how the vehicle
+          is moving and what the road looks like. I built the multithreaded acquisition pipeline on a
+          Raspberry Pi 4, collected the dataset over about 31 riding sessions, and developed the
+          R<sub>skid</sub> model, which combines IMU, GPS, visual and environmental features.
+        </p>
+        <dl class="facts rv">
           <div><dt>Platform</dt><dd>Raspberry Pi 4 (8 GB)</dd></div>
           <div><dt>Sensors</dt><dd>9-DoF IMU, GNSS receiver, USB camera</dd></div>
           <div><dt>Dataset</dt><dd>About 31 sessions on Indian roads</dd></div>
           <div><dt>Status</dt><dd>Paper submitted to IEEE VTC2027-Spring, under review</dd></div>
         </dl>
-      </article>
-
-      <div class="pair">
-        <article>
-          <h3>Low-cost chlorophyll fluorescence sensing</h3>
-          <p class="where">Photonics and Biosensors Lab, IIT Madras, Jun to Jul 2026</p>
-          <p>
-            Built a low-cost active chlorophyll fluorescence spectroscopy system as a proxy for
-            solar-induced fluorescence based plant health monitoring. Ran a comparative multi-stressor
-            study with parallel controls, wrote it up as a conference-style paper draft, and proposed a
-            Raspberry Pi NoIR camera spectrometer as an alternative to commercial instruments.
-          </p>
-        </article>
-        <article>
-          <h3>Streaming lock-in accelerator on FPGA</h3>
-          <p class="where">IIIT Sri City, in progress</p>
-          <p>
-            A digital lock-in amplifier with adaptive bandwidth, framed as a parameterised streaming DSP
-            accelerator for phase-sensitive detection. The study compares CORDIC, polynomial and
-            lookup-table approaches to magnitude and phase extraction on a ZCU104 (Zynq UltraScale+).
-          </p>
-        </article>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="wrap block">
-      <h2 class="via">Projects</h2>
-
-      <ul class="rows">
-        <li>
-          <h3>Siren detection accelerator</h3>
-          <p>INT8 CNN accelerator for emergency-vehicle siren detection on a Xilinx Zynq-7020, built with Team Dual Core at the FPGA Hackathon 2026. Selected to the poster round.</p>
-          <p class="parts">Zynq-7020, quantised CNN, edge AI</p>
-        </li>
-        <li>
-          <h3>IoT e-cycle telemetry</h3>
-          <p>ESP32 firmware for GPS and IMU acquisition, vehicle-to-vehicle experiments over ESP-NOW, long-range telemetry over LoRa, and a live Firebase and Leaflet dashboard. Provisional patent filed.</p>
-          <p class="parts">ESP32, GPS, IMU, LoRa, ESP-NOW</p>
-        </li>
-        <li>
-          <h3>Intelligent collision warning system</h3>
-          <p>Zone-based threat detection on a Raspberry Pi 4 using MobileNetSSD to raise real-time collision-risk alerts.</p>
-          <p class="parts">Raspberry Pi 4, MobileNetSSD, computer vision</p>
-        </li>
-        <li>
-          <h3>Smart street light with LoRa</h3>
-          <p>Street light controller with phase-angle AC dimming, remote monitoring and adaptive dimming over LoRa telecommands. Later adopted in modified form on campus.</p>
-          <p class="parts">LoRa, AC dimming, power electronics</p>
-        </li>
-        <li>
-          <h3>DAC quantisation analysis for quantum control</h3>
-          <p>Monte Carlo circuit-level DAC simulations combined with Qiskit and analytical fidelity modelling to study how quantisation error propagates into control waveforms.</p>
-          <p class="parts">LTspice, Qiskit, Python</p>
-        </li>
-        <li>
-          <h3>UrbanSound8K classification</h3>
-          <p>Led the data loading and augmentation work, built the CNN baseline, and compared classical models (SVM, KNN) against MobileNetV2 transfer learning.</p>
-          <p class="parts">Audio ML, CNN, data pipeline</p>
-        </li>
-      </ul>
+    <!-- RESEARCH 2: a leaf, red points are fluorescence -->
+    <section class="stage" data-shape="leaf" data-side="left">
+      <div class="col">
+        <p class="kicker rv">Research</p>
+        <h2 class="rv">Low-cost chlorophyll fluorescence sensing</h2>
+        <p class="where rv">Photonics and Biosensors Lab, IIT Madras, Jun to Jul 2026</p>
+        <p class="rv">
+          Built a low-cost active chlorophyll fluorescence spectroscopy system as a proxy for
+          solar-induced fluorescence based plant health monitoring. Ran a comparative multi-stressor
+          study with parallel controls and wrote it up as a conference-style paper draft.
+        </p>
+        <p class="rv">
+          Also proposed a Raspberry Pi NoIR camera spectrometer as an alternative to commercial instruments.
+        </p>
+      </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="wrap block">
-      <h2 class="via">Experience</h2>
+    <!-- RESEARCH 3: a tone inside noise, plus the live demo -->
+    <section class="stage stage-wide" data-shape="wave" data-side="center" data-alpha="0.34">
+      <div class="col col-wide">
+        <p class="kicker rv">Research, in progress</p>
+        <h2 class="rv">Streaming lock-in accelerator on FPGA</h2>
+        <p class="rv narrow">
+          A digital lock-in amplifier with adaptive bandwidth, framed as a parameterised streaming DSP
+          accelerator for phase-sensitive detection. The study compares CORDIC, polynomial and
+          lookup-table approaches to magnitude and phase extraction on a ZCU104 (Zynq UltraScale+).
+        </p>
 
-      <ol class="timeline">
-        <li>
-          <p class="when">Jun to Jul 2026</p>
-          <div>
+        <div class="scope rv">
+          <div class="scope-head">
+            <h3 class="scope-title">Try it: find the signal</h3>
+            <p>
+              A 50&nbsp;Hz tone of amplitude 0.50 is buried in noise. The lock-in multiplies the input by a
+              reference and low-pass filters the result to recover it. This is a browser simulation of the
+              technique, not output from the FPGA.
+            </p>
+          </div>
+          <div class="scope-body">
+            <div class="scope-plots">
+              <figure>
+                <figcaption>Input: tone plus noise <span class="key key-gold">the tone alone</span></figcaption>
+                <canvas id="plot-in" height="140" role="img" aria-label="Noisy input signal with the hidden tone overlaid"></canvas>
+              </figure>
+              <figure>
+                <figcaption>Lock-in output: recovered amplitude <span class="key key-dash">true value 0.50</span></figcaption>
+                <canvas id="plot-out" height="140" role="img" aria-label="Recovered amplitude over time, settling toward 0.50"></canvas>
+              </figure>
+            </div>
+            <div class="scope-side">
+              <label for="noise">Noise level</label>
+              <input id="noise" type="range" min="0" max="4" step="0.05" value="1.5">
+              <label for="tau">Filter time constant <output id="tau-out" for="tau">0.30 s</output></label>
+              <input id="tau" type="range" min="0" max="100" step="1" value="50">
+              <dl class="readout">
+                <div><dt>Input SNR</dt><dd id="r-snr">–</dd></div>
+                <div><dt>Recovered</dt><dd id="r-amp">–</dd></div>
+                <div><dt>Error</dt><dd id="r-err">–</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS: sensor nodes and radio links -->
+    <section id="projects" class="stage" data-shape="mesh" data-side="left">
+      <div class="col">
+        <p class="kicker rv">Projects</p>
+        <ul class="rows">
+          <li class="rv">
+            <h3>Siren detection accelerator</h3>
+            <p>INT8 CNN accelerator for emergency-vehicle siren detection on a Xilinx Zynq-7020, built with Team Dual Core at the FPGA Hackathon 2026. Selected to the poster round.</p>
+            <p class="parts">Zynq-7020, quantised CNN, edge AI</p>
+          </li>
+          <li class="rv">
+            <h3>IoT e-cycle telemetry</h3>
+            <p>ESP32 firmware for GPS and IMU acquisition, vehicle-to-vehicle experiments over ESP-NOW, long-range telemetry over LoRa, and a live Firebase and Leaflet dashboard. Provisional patent filed.</p>
+            <p class="parts">ESP32, GPS, IMU, LoRa, ESP-NOW</p>
+          </li>
+          <li class="rv">
+            <h3>Intelligent collision warning system</h3>
+            <p>Zone-based threat detection on a Raspberry Pi 4 using MobileNetSSD to raise real-time collision-risk alerts.</p>
+            <p class="parts">Raspberry Pi 4, MobileNetSSD, computer vision</p>
+          </li>
+          <li class="rv">
+            <h3>Smart street light with LoRa</h3>
+            <p>Street light controller with phase-angle AC dimming, remote monitoring and adaptive dimming over LoRa telecommands. Later adopted in modified form on campus.</p>
+            <p class="parts">LoRa, AC dimming, power electronics</p>
+          </li>
+          <li class="rv">
+            <h3>DAC quantisation analysis for quantum control</h3>
+            <p>Monte Carlo circuit-level DAC simulations combined with Qiskit and analytical fidelity modelling to study how quantisation error propagates into control waveforms.</p>
+            <p class="parts">LTspice, Qiskit, Python</p>
+          </li>
+          <li class="rv">
+            <h3>UrbanSound8K classification</h3>
+            <p>Led the data loading and augmentation work, built the CNN baseline, and compared classical models (SVM, KNN) against MobileNetV2 transfer learning.</p>
+            <p class="parts">Audio ML, CNN, data pipeline</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE: a helix -->
+    <section id="experience" class="stage" data-shape="helix" data-side="right">
+      <div class="col">
+        <p class="kicker rv">Experience</p>
+        <ol class="timeline">
+          <li class="rv">
+            <p class="when">Jun to Jul 2026</p>
             <h3>Research intern, Photonics and Biosensors Lab</h3>
             <p class="where">Indian Institute of Technology Madras</p>
-            <p>Worked under Dr. Shivananju B.N. on optical sensing; built and characterised the chlorophyll fluorescence system described above.</p>
-          </div>
-        </li>
-        <li>
-          <p class="when">Jul to Aug 2025</p>
-          <div>
+            <p>Worked under Dr. Shivananju B.N. on optical sensing; built and characterised the chlorophyll fluorescence system.</p>
+          </li>
+          <li class="rv">
+            <p class="when">Jul to Aug 2025</p>
             <h3>Research intern, Smart Transportation Lab</h3>
             <p class="where">IIIT Sri City</p>
             <p>Wrote ESP32 firmware for IMU (I2C) and GPS (UART) acquisition, built the telemetry pipeline into Firebase, and made the Leaflet dashboard for the IoT e-cycle. Provisional patent filed on the platform.</p>
-          </div>
-        </li>
-        <li>
-          <p class="when">May to Jul 2025</p>
-          <div>
+          </li>
+          <li class="rv">
+            <p class="when">May to Jul 2025</p>
             <h3>Software intern, Hardware Platform Solutions</h3>
             <p class="where">Celestica India Pvt. Ltd., Chennai</p>
             <p>Built Python test automation and orchestration tooling over SSH and REST APIs, including a rerun framework that cut manual re-triggering of test suites.</p>
-          </div>
-        </li>
-      </ol>
+          </li>
+        </ol>
 
-      <h2 class="via via-gap">Education</h2>
-      <ol class="timeline">
-        <li>
-          <p class="when">2023 to 2027</p>
-          <div>
+        <p class="kicker kicker-gap rv">Education</p>
+        <ol class="timeline">
+          <li class="rv">
+            <p class="when">2023 to 2027</p>
             <h3>B.Tech (Honours), Electronics and Communication Engineering</h3>
             <p class="where">Indian Institute of Information Technology Sri City</p>
             <p>CGPA 8.43 / 10</p>
-          </div>
-        </li>
-        <li>
-          <p class="when">2021 to 2023</p>
-          <div>
+          </li>
+          <li class="rv">
+            <p class="when">2021 to 2023</p>
             <h3>Higher secondary (Class 12)</h3>
             <p class="where">Narayana Junior College, Chennai</p>
             <p>93%</p>
-          </div>
-        </li>
-      </ol>
+          </li>
+        </ol>
 
-      <h2 class="via via-gap">Leadership</h2>
-      <ol class="timeline">
-        <li>
-          <p class="when">Aug 2025 to present</p>
-          <div>
+        <p class="kicker kicker-gap rv">Leadership</p>
+        <ol class="timeline">
+          <li class="rv">
+            <p class="when">Aug 2025 to present</p>
             <h3>Club lead, <a href="https://www.linkedin.com/in/nexsync-iiits-6b698032b/" target="_blank" rel="noopener">NexSync Smart Mobility Club</a></h3>
             <p>Lead the club's smart mobility and vehicle-to-vehicle communication projects.</p>
-          </div>
-        </li>
-        <li>
-          <p class="when">Sep 2024 to Sep 2025</p>
-          <div>
+          </li>
+          <li class="rv">
+            <p class="when">Sep 2024 to Sep 2025</p>
             <h3>Co-lead, <a href="https://iiits.ac.in/student-teams-2024-25/" target="_blank" rel="noopener">Marketing Team</a></h3>
             <p>Ran marketing for institute-level events. Certificate ref. IIITS/AY2425/Certificate/Marketing Team/2.</p>
-          </div>
-        </li>
-      </ol>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="wrap block">
-      <h2 class="via">Skills</h2>
-
-      <dl class="skills">
-        <div><dt>Languages</dt><dd>C, C++, Embedded C, Python, Verilog, SystemVerilog, MATLAB</dd></div>
-        <div><dt>Digital design</dt><dd>Xilinx Vivado, Cadence Genus, Innovus and Virtuoso</dd></div>
-        <div><dt>Microcontrollers and SBCs</dt><dd>ESP32, ESP8266, PIC, 8051, Raspberry Pi, STM32 (familiar)</dd></div>
-        <div><dt>Interfaces</dt><dd>GPIO, I2C, SPI, UART, PWM, ADC, CAN (familiar)</dd></div>
-        <div><dt>Wireless</dt><dd>LoRa, ESP-NOW, BLE, Wi-Fi</dd></div>
-        <div><dt>Simulation</dt><dd>LTspice, MATLAB, Qiskit (system level)</dd></div>
-        <div><dt>Bench and tooling</dt><dd>Logic analyser, oscilloscope, Git, Linux, PlatformIO</dd></div>
-        <div><dt>Certifications</dt><dd>Verilog HDL: VLSI Masterclass (Udemy); IoT and Autonomous Systems (IEEE ITSS, IIIT Sri City); ESP32 IoT Internship (COGTIS Technologies)</dd></div>
-      </dl>
+    <!-- SKILLS: back to the chip -->
+    <section id="skills" class="stage" data-shape="chip" data-side="left">
+      <div class="col">
+        <p class="kicker rv">Skills</p>
+        <dl class="skills">
+          <div class="rv"><dt>Languages</dt><dd>C, C++, Embedded C, Python, Verilog, SystemVerilog, MATLAB</dd></div>
+          <div class="rv"><dt>Digital design</dt><dd>Xilinx Vivado, Cadence Genus, Innovus and Virtuoso</dd></div>
+          <div class="rv"><dt>Microcontrollers and SBCs</dt><dd>ESP32, ESP8266, PIC, 8051, Raspberry Pi, STM32 (familiar)</dd></div>
+          <div class="rv"><dt>Interfaces</dt><dd>GPIO, I2C, SPI, UART, PWM, ADC, CAN (familiar)</dd></div>
+          <div class="rv"><dt>Wireless</dt><dd>LoRa, ESP-NOW, BLE, Wi-Fi</dd></div>
+          <div class="rv"><dt>Simulation</dt><dd>LTspice, MATLAB, Qiskit (system level)</dd></div>
+          <div class="rv"><dt>Bench and tooling</dt><dd>Logic analyser, oscilloscope, Git, Linux, PlatformIO</dd></div>
+          <div class="rv"><dt>Certifications</dt><dd>Verilog HDL: VLSI Masterclass (Udemy); IoT and Autonomous Systems (IEEE ITSS, IIIT Sri City); ESP32 IoT Internship (COGTIS Technologies)</dd></div>
+        </dl>
+      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="wrap block contact">
-      <h2 class="via">Contact</h2>
-      <p class="contact-line">
-        Open to research collaborations and internships in embedded systems, FPGA and edge AI.
-      </p>
-      <p><a class="contact-mail" href="mailto:adithya395672@gmail.com">adithya395672@gmail.com</a></p>
-      <ul class="hero-links">
-        <li><a class="btn" href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf">Download resume</a></li>
-        <li><a class="btn" href="https://github.com/Adk-157" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a class="btn" href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+    <!-- CONTACT: everything winds into a vortex -->
+    <section id="contact" class="stage stage-end" data-shape="vortex" data-side="center" data-alpha="0.5">
+      <div class="col col-center">
+        <p class="kicker rv">Contact</p>
+        <p class="lede rv">Open to research collaborations and internships in embedded systems, FPGA and edge AI.</p>
+        <p class="rv"><a class="mail" href="mailto:adithya395672@gmail.com">adithya395672@gmail.com</a></p>
+        <ul class="links rv">
+          <li><a class="btn" href="Resume.pdf" download="Adithya_Ram_S_Resume.pdf">Download resume</a></li>
+          <li><a class="btn" href="https://github.com/Adk-157" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="btn" href="https://linkedin.com/in/adithya-ram-s-514a6528a" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p class="foot">Adithya Ram S, Sri City and Chennai, India.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap foot">
-    <p>Adithya Ram S, Sri City and Chennai, India.</p>
-  </footer>
-
+  <script src="scene.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
