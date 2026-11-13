@@ -1,7 +1,7 @@
-Saira Condensed and IBM Plex Sans are licensed under the SIL Open Font License 1.1.
+Bricolage Grotesque and Manrope are licensed under the SIL Open Font License 1.1.
 
-== Saira Condensed ==
-Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-ExtraLight.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-Light.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-Regular.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-Medium.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-SemiBold.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-Bold.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-ExtraBold.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira". SairaCondensed-Black.ttf: Copyright 2016 The Saira Project Authors (omnibus.type@gmail.com), with reserved font name "Saira".
+== Bricolage Grotesque ==
+Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
@@ -95,8 +95,8 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-== IBM Plex Sans ==
-Copyright 2019 IBM Corp. All rights reserved. IBMPlexSans-Italic[wdth,wght].ttf: Copyright 2019 IBM Corp. All rights reserved.
+== Manrope ==
+Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
