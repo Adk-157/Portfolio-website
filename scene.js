@@ -308,7 +308,7 @@
     gl.uniform1f(U.uAspect, W / H);
     gl.uniform1f(U.uScale, lerp(pa.s, pb.s, e) * Math.min(1, (W / H) / 1.1 + 0.25));
     gl.uniform1f(U.uAlpha, lerp(pa.a, pb.a, e));
-    gl.uniform1f(U.uPx, (small.matches ? 2.0 : 2.3) * dpr);
+    gl.uniform1f(U.uPx, (small.matches ? 2.0 : 2.3) * dpr * Math.max(1, Math.min(2.4, W / 1440)));
     gl.uniform2f(U.uOff, lerp(pa.x, pb.x, e), lerp(pa.y, pb.y, e));
     gl.uniform2f(U.uMouse, mouse.x, mouse.y);
     gl.uniform2f(U.uLook, mouse.lx, mouse.ly);
